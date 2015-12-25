@@ -14,6 +14,7 @@
 				<Option projectResourceIncludeDirsRelation="1" />
 				<Compiler>
 					<Add directory="include" />
+					<Add directory="utilities" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -22,6 +23,7 @@
 		</VirtualTargets>
 		<Compiler>
 			<Add option="-std=c++11" />
+			<Add option="-g" />
 			<Add directory="dependencies/glut/include" />
 		</Compiler>
 		<Linker>
@@ -30,12 +32,11 @@
 			<Add library="glut32" />
 			<Add directory="dependencies/glut/lib" />
 		</Linker>
-		<Unit filename="CGLab01.cpp" />
-		<Unit filename="CGLab01.hpp" />
-		<Unit filename="CGLabmain.cpp" />
-		<Unit filename="CGLabmain.hpp">
-			<Option weight="49" />
-		</Unit>
+		<Unit filename="main.cpp" />
+		<Unit filename="utilities/GlutManager.cpp" />
+		<Unit filename="utilities/GlutManager.hpp" />
+		<Unit filename="utilities/GlutWindow.cpp" />
+		<Unit filename="utilities/GlutWindow.hpp" />
 		<Unit filename="utilities/Mesh.cpp" />
 		<Unit filename="utilities/Mesh.hpp" />
 		<Unit filename="utilities/ObjReader.cpp" />
