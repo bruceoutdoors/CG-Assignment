@@ -32,7 +32,6 @@
 			<Add library="glut32" />
 			<Add directory="dependencies/glut/lib" />
 		</Linker>
-		<Unit filename="main.cpp" />
 		<Unit filename="utilities/GlutManager.cpp" />
 		<Unit filename="utilities/GlutManager.hpp" />
 		<Unit filename="utilities/GlutWindow.cpp" />
@@ -44,6 +43,7 @@
 		<Unit filename="utilities/Transformable.cpp" />
 		<Unit filename="utilities/Transformable.hpp" />
 		<Unit filename="utilities/Typedefs.hpp" />
+		<Unit filename="windowtestmain.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
