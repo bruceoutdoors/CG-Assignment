@@ -32,6 +32,9 @@
 			<Add library="glut32" />
 			<Add directory="dependencies/glut/lib" />
 		</Linker>
+		<Unit filename="CGLab01VirtualWorld.cpp" />
+		<Unit filename="CGLab01VirtualWorld.hpp" />
+		<Unit filename="main.cpp" />
 		<Unit filename="utilities/GlutManager.cpp" />
 		<Unit filename="utilities/GlutManager.hpp" />
 		<Unit filename="utilities/GlutWindow.cpp" />
@@ -43,7 +46,14 @@
 		<Unit filename="utilities/Transformable.cpp" />
 		<Unit filename="utilities/Transformable.hpp" />
 		<Unit filename="utilities/Typedefs.hpp" />
-		<Unit filename="windowtestmain.cpp" />
+		<Unit filename="wyp/MyAxis.cpp" />
+		<Unit filename="wyp/MyAxis.hpp" />
+		<Unit filename="wyp/MyModelLoader.cpp" />
+		<Unit filename="wyp/MyModelLoader.hpp" />
+		<Unit filename="wyp/MyVirtualWorld.cpp" />
+		<Unit filename="wyp/MyVirtualWorld.hpp" />
+		<Unit filename="wyp/WypWindow.cpp" />
+		<Unit filename="wyp/WypWindow.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
