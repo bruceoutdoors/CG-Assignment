@@ -2,6 +2,7 @@
 
 #include "wyp/MyVirtualWorld.hpp"
 #include "wyp/MyModelLoader.hpp"
+#include "wyp/WypWindow.hpp"
 #include "utilities/Mesh.hpp"
 #include <string>
 #include <vector>
@@ -45,7 +46,7 @@ private:
 class CGLab01VirtualWorld : public MyVirtualWorld
 {
 public:
-    CGLab01VirtualWorld();
+    CGLab01VirtualWorld(WypWindow *parent);
     virtual ~CGLab01VirtualWorld();
     void draw() override;
     void tickTime() override;
@@ -59,4 +60,5 @@ private:
     MyModelLoader      mymodelloader;
     Mesh *deer;
     Mesh *elephant;
+    WypWindow *parent;
 };

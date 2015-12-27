@@ -1,4 +1,6 @@
 #include "WypWindow.hpp"
+#include "../utilities/SelectMaster.hpp"
+#include "../utilities/Mesh.hpp"
 #include <iostream>
 
 WypWindow::WypWindow(std::string title) :
@@ -9,7 +11,14 @@ WypWindow::WypWindow(std::string title) :
     viewingInit();
     lightingInit();
 
+    selMaster = new SelectMaster(viewer, world);
+
     welcome();
+}
+
+WypWindow::~WypWindow()
+{
+    delete selMaster;
 }
 
 void WypWindow::dataInit()
@@ -192,6 +201,14 @@ void WypWindow::onMouse(int button, int state, int x, int y)
           setting.mouseX = x;
           setting.mouseY = y;
           setting.mouseLeftMode = true;
+
+          Selectable *s = selMaster->getSelect(x, y);
+          // selMaster->removeSelectable(s);
+          viewingInit();
+          if (s) {
+            Mesh *m = dynamic_cast<Mesh*>(s);
+            if (m) std::cout << m->getName() << std::endl;
+          }
        }
 
        if (state == GLUT_UP &&  setting.mouseLeftMode) {
@@ -232,3 +249,7 @@ void WypWindow::setVirtualWorld(MyVirtualWorld* vw)
     virtualworld = vw;
 }
 
+SelectMaster *WypWindow::getSelectMaster()
+{
+    return selMaster;
+}

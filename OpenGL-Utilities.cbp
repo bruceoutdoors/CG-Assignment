@@ -35,6 +35,7 @@
 		<Unit filename="CGLab01VirtualWorld.cpp" />
 		<Unit filename="CGLab01VirtualWorld.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="utilities/Drawable.hpp" />
 		<Unit filename="utilities/GlutManager.cpp" />
 		<Unit filename="utilities/GlutManager.hpp" />
 		<Unit filename="utilities/GlutWindow.cpp" />
@@ -43,6 +44,10 @@
 		<Unit filename="utilities/Mesh.hpp" />
 		<Unit filename="utilities/ObjReader.cpp" />
 		<Unit filename="utilities/ObjReader.hpp" />
+		<Unit filename="utilities/SelectMaster.cpp" />
+		<Unit filename="utilities/SelectMaster.hpp" />
+		<Unit filename="utilities/Selectable.cpp" />
+		<Unit filename="utilities/Selectable.hpp" />
 		<Unit filename="utilities/Transformable.cpp" />
 		<Unit filename="utilities/Transformable.hpp" />
 		<Unit filename="utilities/Typedefs.hpp" />

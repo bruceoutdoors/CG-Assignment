@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../utilities/TypeDefs.hpp"
 #include "../utilities/GlutWindow.hpp"
 #include "MyAxis.hpp"
 #include "MyVirtualWorld.hpp"
@@ -17,36 +18,6 @@ static GLfloat mygray10Percent[] = { 0.1f, 0.1f, 0.1f, 1.0f };
 static GLfloat mygray20Percent[] = { 0.2f, 0.2f, 0.2f, 1.0f };
 static GLfloat mygray30Percent[] = { 0.3f, 0.3f, 0.3f, 1.0f };
 
-struct MyWorld
-{
-    GLdouble rotateX, rotateY, rotateZ;
-    GLdouble posX, posY, posZ;
-    GLdouble scaleX, scaleY, scaleZ;
-    void move(GLfloat xinc, GLfloat yinc, GLfloat zinc)
-    {
-        posX += xinc;
-        posY += yinc;
-        posZ += zinc;
-    }
-    void rotate(GLfloat xinc, GLfloat yinc, GLfloat zinc)
-    {
-        rotateX += xinc;
-        rotateY += yinc;
-        rotateZ += zinc;
-    }
-};
-
-struct MyViewer
-{
-    GLdouble eyeX, eyeY, eyeZ;
-    GLdouble centerX, centerY, centerZ;
-    GLdouble upX, upY, upZ;
-
-    GLdouble zNear, zFar;   // The distance to the near/far clipping plane
-    GLdouble fieldOfView;   // Angle at Y direction
-    GLdouble aspectRatio;   // width / height
-};
-
 struct MySetting
 {
     GLdouble posInc;
@@ -58,10 +29,13 @@ struct MySetting
     bool shadingMode;
 };
 
+class SelectMaster;
+
 class WypWindow : public GlutWindow
 {
 public:
     WypWindow(std::string title = "TCS2111 Computer Graphics");
+    virtual ~WypWindow();
 
     void draw() override;
     void onKeyboard(unsigned char key, int x, int y) override;
@@ -70,6 +44,7 @@ public:
     void onMouse(int button, int state, int x, int y) override;
 
     void setVirtualWorld(MyVirtualWorld *vw);
+    SelectMaster *getSelectMaster();
 
 private:
     void dataInit();
@@ -77,9 +52,10 @@ private:
     void lightingInit();
     void welcome();
 
-    MyWorld    world;
-    MyViewer   viewer;
+    World    world;
+    Viewer   viewer;
     MySetting  setting;
     MyAxis     worldaxis;
     MyVirtualWorld *virtualworld;
+    SelectMaster *selMaster;
 };

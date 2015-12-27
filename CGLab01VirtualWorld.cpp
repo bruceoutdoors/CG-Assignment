@@ -1,7 +1,9 @@
 #include "CGLab01VirtualWorld.hpp"
+#include "utilities/SelectMaster.hpp"
 #include <GL/glut.h>
 
-CGLab01VirtualWorld::CGLab01VirtualWorld()
+CGLab01VirtualWorld::CGLab01VirtualWorld(WypWindow *parent) :
+    parent(parent)
 {
     mymodelloader.load("data/model_lowpolygonstanforddragon.txt",100);
     deer = new Mesh("data/deer.obj");
@@ -10,11 +12,17 @@ CGLab01VirtualWorld::CGLab01VirtualWorld()
     deer->setTranslateZ(-7.0f);
     deer->setRotateY(15.0f);
     deer->setScale(0.5f);
+    deer->setName("Deer Mesh");
 
     elephant = new Mesh("data/elephant-triangulated.obj");
     elephant->setFlatColor({{ .8, .1, .15 }});
     elephant->setTranslateX(-10.5f);
     elephant->setRotateY(-45.0f);
+    elephant->setName("Elephant mesh");
+
+    SelectMaster *sm = parent->getSelectMaster();
+    sm->addSelectable(deer);
+    sm->addSelectable(elephant);
 }
 
 CGLab01VirtualWorld::~CGLab01VirtualWorld()
