@@ -61,6 +61,8 @@ Selectable *SelectMaster::getSelect(int x, int y)
 
     hits = glRenderMode (GL_RENDER);
 
+    restoreView();
+
     return processHits(hits, selectBuf);
 }
 
@@ -74,6 +76,27 @@ void SelectMaster::removeSelectable(Selectable* s)
     auto rf = std::remove_if(selectables.begin(), selectables.end(),
                             [&](Selectable *x){ return s == x; });
     if (rf != selectables.end()) selectables.erase(rf);
+}
+
+void SelectMaster::clearSelectables()
+{
+    selectables.clear();
+}
+
+void SelectMaster::restoreView()
+{
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(viewer.fieldOfView,
+                   viewer.aspectRatio,
+                   viewer.zNear,
+                   viewer.zFar);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    gluLookAt(viewer.eyeX,   viewer.eyeY,   viewer.eyeZ,
+              viewer.centerX,viewer.centerY,viewer.centerZ,
+              viewer.upX,    viewer.upY,    viewer.upZ );
 }
 
 

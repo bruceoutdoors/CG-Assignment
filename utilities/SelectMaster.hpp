@@ -13,9 +13,11 @@ public:
     Selectable *getSelect(int x, int y);
     void addSelectable(Selectable *s);
     void removeSelectable(Selectable *s);
+    void clearSelectables();
 
 private:
     Selectable *processHits(GLint hits, GLuint buffer[]);
+    void restoreView();
 
     std::vector<Selectable*> selectables;
     Viewer &viewer;

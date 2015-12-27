@@ -204,7 +204,6 @@ void WypWindow::onMouse(int button, int state, int x, int y)
 
           Selectable *s = selMaster->getSelect(x, y);
           // selMaster->removeSelectable(s);
-          viewingInit();
           if (s) {
             Mesh *m = dynamic_cast<Mesh*>(s);
             if (m) std::cout << m->getName() << std::endl;
