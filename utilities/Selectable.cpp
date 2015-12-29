@@ -1,5 +1,5 @@
 #include "Selectable.hpp"
-#include "../wyp/WypWindow.hpp"
+#include "WypWindow.hpp"
 
 GLuint Selectable::currentId = 1;
 std::map<GLuint, Selectable*> Selectable::idToSelectable;

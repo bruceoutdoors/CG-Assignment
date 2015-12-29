@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../utilities/TypeDefs.hpp"
-#include "../utilities/GlutWindow.hpp"
+#include "TypeDefs.hpp"
+#include "GlutWindow.hpp"
 #include "MyAxis.hpp"
 #include "MyVirtualWorld.hpp"
 

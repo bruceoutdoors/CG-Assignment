@@ -1,4 +1,4 @@
-#include "wyp/WypWindow.hpp"
+#include "WypWindow.hpp"
 #include "CGLab01VirtualWorld.hpp"
 #include <iostream>
 

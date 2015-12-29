@@ -1,6 +1,6 @@
 #include "WypWindow.hpp"
-#include "../utilities/SelectMaster.hpp"
-#include "../utilities/Mesh.hpp"
+#include "SelectMaster.hpp"
+#include "Mesh.hpp"
 #include <iostream>
 
 WypWindow::WypWindow(std::string title) :

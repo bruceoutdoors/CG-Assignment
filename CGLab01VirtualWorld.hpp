@@ -1,8 +1,8 @@
 #pragma once
 
-#include "wyp/MyVirtualWorld.hpp"
-#include "wyp/MyModelLoader.hpp"
-#include "wyp/WypWindow.hpp"
+#include "MyVirtualWorld.hpp"
+#include "MyModelLoader.hpp"
+#include "WypWindow.hpp"
 #include "utilities/Mesh.hpp"
 #include <string>
 #include <vector>
