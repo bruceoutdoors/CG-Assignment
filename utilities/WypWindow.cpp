@@ -113,8 +113,6 @@ void WypWindow::draw()
 
     if (virtualworld) {
         virtualworld->draw();
-        virtualworld->calculateElapsedTime();
-        virtualworld->tickTime();
     }
 }
 

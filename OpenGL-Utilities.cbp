@@ -31,25 +31,42 @@
 			<Add library="glut32" />
 			<Add directory="dependencies/glut/lib" />
 		</Linker>
-		<Unit filename="CGLab01.cpp" />
-		<Unit filename="CGLab01.hpp" />
-		<Unit filename="CGLabmain.cpp" />
-		<Unit filename="CGLabmain.hpp">
-			<Option weight="49" />
-		</Unit>
+		<Unit filename="AlienThemePark.cpp" />
+		<Unit filename="AlienThemePark.hpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="utilities/Animatable.hpp" />
+		<Unit filename="utilities/AnimationMaster.cpp" />
+		<Unit filename="utilities/AnimationMaster.hpp" />
 		<Unit filename="utilities/Drawable.hpp" />
 		<Unit filename="utilities/Extrusion.cpp" />
 		<Unit filename="utilities/Extrusion.hpp" />
+		<Unit filename="utilities/GlutManager.cpp" />
+		<Unit filename="utilities/GlutManager.hpp" />
+		<Unit filename="utilities/GlutWindow.cpp" />
+		<Unit filename="utilities/GlutWindow.hpp" />
 		<Unit filename="utilities/Loft.cpp" />
 		<Unit filename="utilities/Loft.hpp" />
 		<Unit filename="utilities/Mesh.cpp" />
 		<Unit filename="utilities/Mesh.hpp" />
+		<Unit filename="utilities/MiscStructs.hpp" />
+		<Unit filename="utilities/MyAxis.cpp" />
+		<Unit filename="utilities/MyAxis.hpp" />
+		<Unit filename="utilities/MyModelLoader.cpp" />
+		<Unit filename="utilities/MyModelLoader.hpp" />
+		<Unit filename="utilities/MyVirtualWorld.cpp" />
+		<Unit filename="utilities/MyVirtualWorld.hpp" />
 		<Unit filename="utilities/ObjReader.cpp" />
 		<Unit filename="utilities/ObjReader.hpp" />
+		<Unit filename="utilities/SelectMaster.cpp" />
+		<Unit filename="utilities/SelectMaster.hpp" />
+		<Unit filename="utilities/Selectable.cpp" />
+		<Unit filename="utilities/Selectable.hpp" />
 		<Unit filename="utilities/Transformable.cpp" />
 		<Unit filename="utilities/Transformable.hpp" />
 		<Unit filename="utilities/VecMatMath.cpp" />
 		<Unit filename="utilities/VecMatMath.hpp" />
+		<Unit filename="utilities/WypWindow.cpp" />
+		<Unit filename="utilities/WypWindow.hpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
