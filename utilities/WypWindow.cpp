@@ -252,3 +252,12 @@ SelectMaster *WypWindow::getSelectMaster()
 {
     return selMaster;
 }
+
+
+void WypWindow::onReshape(int width, int height)
+{
+    this->width = width;
+    this->height = height;
+    viewer.aspectRatio = static_cast<GLdouble> (width) / height;
+    viewingInit();
+}

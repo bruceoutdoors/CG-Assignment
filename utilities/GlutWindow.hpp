@@ -33,7 +33,7 @@ public:
     std::string getTitle() const;
     void  setTitle(std::string title);
 
-private:
+protected:
     int id;
     GLint x, y;
     GLint width, height;

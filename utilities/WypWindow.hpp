@@ -42,6 +42,7 @@ public:
     void onSpecial(int key, int x, int y) override;
     void onMotion(int x, int y) override;
     void onMouse(int button, int state, int x, int y) override;
+    void onReshape(int width, int height) override;
 
     void setVirtualWorld(MyVirtualWorld *vw);
     SelectMaster *getSelectMaster();
