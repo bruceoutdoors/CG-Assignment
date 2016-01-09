@@ -2,6 +2,7 @@
 
 #include "VecMatMath.hpp"
 #include "Transformable.hpp"
+#include "Selectable.hpp"
 #include <vector>
 #include <string>
 #ifdef __APPLE__
@@ -12,13 +13,13 @@
 
 using std::vector;
 
-class Mesh : public Transformable
+class Mesh : public Transformable, public Selectable
 {
 public:
     Mesh();
     Mesh(std::string path);
     virtual ~Mesh();
-    void draw();
+    void draw() override;
 
     GLuint getNumIndices() const;
     GLuint getNumVertices() const;
