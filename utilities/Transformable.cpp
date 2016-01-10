@@ -1,26 +1,57 @@
 #include "Transformable.hpp"
 
+Transformable::Transformable(bool isRotateAlongAxis) :
+    isRotateAlongAxis(isRotateAlongAxis)
+{
+    resetTransformations();
+}
+
+
 void Transformable::applyTransform(std::function<void()> drawCall)
 {
     glPushMatrix();
-    glRotatef(rotateX, 1.0f, 0.0f, 0.0f);
-    glRotatef(rotateY, 0.0f, 1.0f, 0.0f);
-    glRotatef(rotateZ, 0.0f, 0.0f, 1.0f);
-    glTranslatef(translateX, translateY, translateZ);
-    glScalef(scale, scale, scale);
+
+
+    for (auto t = transformations.rbegin(); t != transformations.rend(); t++) {
+        (*t)->applyTransformOnMatrix();
+    }
+    applyTransformOnMatrix();
 
     drawCall();
+
     glPopMatrix();
+}
+
+void Transformable::applyTransformOnMatrix()
+{
+    glTranslatef(translateX, translateY, translateZ);
+    if (isRotateAlongAxis) {
+        glRotatef(axisRotation, axis[0], axis[1], axis[2]);
+    } else {
+        glRotatef(rotateX, 1.0f, 0.0f, 0.0f);
+        glRotatef(rotateY, 0.0f, 1.0f, 0.0f);
+        glRotatef(rotateZ, 0.0f, 0.0f, 1.0f);
+    }
+
+    glScalef(scale, scale, scale);
+}
+
+void Transformable::addTransformation(Transformable *t)
+{
+    transformations.push_back(t);
 }
 
 void Transformable::resetTransformations()
 {
-    rotateX
+    axisRotation
+      = rotateX
         = rotateY
           = rotateZ
             = translateX
               = translateY
                 = translateZ = 0;
+
+    axis = {{ 0, 1, 0 }};
     scale = 1;
 }
 
@@ -100,4 +131,24 @@ GLfloat Transformable::getTranslateZ() const
 void Transformable::setTranslateZ(const GLfloat &value)
 {
     translateZ = value;
+}
+
+vec3 Transformable::getAxis() const
+{
+    return axis;
+}
+
+GLfloat Transformable::getAxisRotation() const
+{
+    return axisRotation;
+}
+
+void Transformable::setAxis(const vec3& value)
+{
+    axis = value;
+}
+
+void Transformable::setAxisRotation(const GLfloat& value)
+{
+    axisRotation = value;
 }

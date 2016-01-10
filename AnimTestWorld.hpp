@@ -6,10 +6,14 @@
 #include "utilities/WypWindow.hpp"
 #include "utilities/Animatable.hpp"
 #include "utilities/AnimationMaster.hpp"
+#include "utilities/Drawable.hpp"
+#include "utilities/SplineAnimation.hpp"
 #include <string>
 #include <vector>
 
-class SimpleBouncingBall : public Animatable
+using namespace std;
+
+class SimpleBouncingBall : public Animatable, public Drawable
 {
 public:
     SimpleBouncingBall();
@@ -33,5 +37,8 @@ public:
 private:
     SimpleBouncingBall simplebouncingball;
     AnimationMaster *am;
+    SplineAnimation *sa;
+    vector<vec3> spline;
     WypWindow *parent;
+    Mesh *m;
 };

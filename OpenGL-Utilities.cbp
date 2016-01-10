@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="OpenGL-Utilities" />
+		<Option title="CG-Assignment-AlienThemePark" />
 		<Option pch_mode="0" />
 		<Option compiler="gcc" />
 		<Build>
@@ -31,8 +31,8 @@
 			<Add library="glut32" />
 			<Add directory="dependencies/glut/lib" />
 		</Linker>
-		<Unit filename="AlienThemePark.cpp" />
-		<Unit filename="AlienThemePark.hpp" />
+		<Unit filename="AnimTestWorld.cpp" />
+		<Unit filename="AnimTestWorld.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="utilities/Animatable.hpp" />
 		<Unit filename="utilities/AnimationMaster.cpp" />
@@ -61,6 +61,8 @@
 		<Unit filename="utilities/SelectMaster.hpp" />
 		<Unit filename="utilities/Selectable.cpp" />
 		<Unit filename="utilities/Selectable.hpp" />
+		<Unit filename="utilities/SplineAnimation.cpp" />
+		<Unit filename="utilities/SplineAnimation.hpp" />
 		<Unit filename="utilities/Transformable.cpp" />
 		<Unit filename="utilities/Transformable.hpp" />
 		<Unit filename="utilities/VecMatMath.cpp" />
