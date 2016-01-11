@@ -29,34 +29,32 @@ void SimpleBouncingBall::updateFrame(int elapsedTime)
     }
 };
 
-AnimTestWorld::AnimTestWorld(WypWindow *parent) :
-    parent(parent)
+AnimTestWorld::AnimTestWorld() :
+    m("data/dark_fighter_6.obj")
 {
     spline = generateSpline(-25, 25, 150,
                            [](float z)->float { return sin(z/2.0) * 15; },
                            [](float x)->float { return cos(x/2.0) * 15; },
                            [](float y)->float { return y; });
 
-    m = new Mesh("data/dark_fighter_6.obj");
     sa = new SplineAnimation(&spline, 10);
 
-    m->setFlatColor({{.9, .3, .9}});
-    m->setRotateZ(-90);
-    m->addTransformation(sa->getTransformable());
+    m.setFlatColor({{.9, .3, .9}});
+    m.setRotateZ(-90);
+    m.addTransformation(sa->getTransformable());
 
-    am = new AnimationMaster();
-    am->addAnimatable(sa);
-    am->addAnimatable(&simplebouncingball);
+    am.addAnimatable(sa);
+    am.addAnimatable(&simplebouncingball);
 }
 
 AnimTestWorld::~AnimTestWorld()
 {
-    delete am;
+    delete sa;
 }
 
 void AnimTestWorld::draw()
 {
-    am->update();
+    am.update();
 
     glPushMatrix();
     glDisable(GL_LIGHTING);
@@ -75,6 +73,6 @@ void AnimTestWorld::draw()
     glPopMatrix();
 
     glPushMatrix();
-        m->draw();
+        m.draw();
     glPopMatrix();
 }

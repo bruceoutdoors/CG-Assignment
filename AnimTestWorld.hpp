@@ -36,15 +36,14 @@ private:
 class AnimTestWorld : public MyVirtualWorld
 {
 public:
-    AnimTestWorld(WypWindow *parent);
+    AnimTestWorld();
     virtual ~AnimTestWorld();
     void draw() override;
 
 private:
     SimpleBouncingBall simplebouncingball;
-    AnimationMaster *am;
+    AnimationMaster am;
+    Mesh m;
     SplineAnimation *sa;
     vector<vec3> spline;
-    WypWindow *parent;
-    Mesh *m;
 };
