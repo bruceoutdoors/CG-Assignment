@@ -4,6 +4,11 @@
 #include "GlutWindow.hpp"
 #include "MyAxis.hpp"
 #include "MyVirtualWorld.hpp"
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/glut.h>
+#endif
 
 static GLfloat myblack[]   = { 0.0f, 0.0f, 0.0f, 1.0f };
 static GLfloat mywhite[]   = { 1.0f, 1.0f, 1.0f, 1.0f };

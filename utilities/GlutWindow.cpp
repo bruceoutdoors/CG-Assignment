@@ -1,6 +1,10 @@
 #include "GlutWindow.hpp"
 #include "GlutManager.hpp"
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
 #include <GL/glut.h>
+#endif
 
 GlutWindow::GlutWindow(std::string title) :
     x(100), y(100),

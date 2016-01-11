@@ -1,6 +1,10 @@
 #include "GlutManager.hpp"
 #include "GlutWindow.hpp"
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
 #include <GL/glut.h>
+#endif
 
 GlutWindow *GlutManager::activeGlutWindow = nullptr;
 std::map<int, GlutWindow*> GlutManager::idToWindow;

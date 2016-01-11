@@ -38,6 +38,7 @@
 #include "utilities/Mesh.hpp"
 #include "utilities/Extrusion.hpp"
 #include "utilities/Loft.hpp"
+#include "utilities/VecMatMath.hpp"
 #include <string>
 #include <vector>
 

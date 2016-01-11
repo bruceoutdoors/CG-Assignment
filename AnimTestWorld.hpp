@@ -11,6 +11,12 @@
 #include <string>
 #include <vector>
 
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/glut.h>
+#endif
+
 using namespace std;
 
 class SimpleBouncingBall : public Animatable, public Drawable

@@ -1,7 +1,7 @@
 #include "AnimTestWorld.hpp"
-#include "utilities/AnimationMaster.hpp"
-#include "utilities/SelectMaster.hpp"
-#include <GL/glut.h>
+
+
+
 
 SimpleBouncingBall::SimpleBouncingBall()
 {

@@ -1,6 +1,10 @@
 #include "utilities/GlutWindow.hpp"
 #include <iostream>
-#include <GL/glut.h>
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/gl.h>
+#endif
 
 using namespace std;
 
@@ -27,16 +31,16 @@ public:
     }
 };
 
-int main(int argc, char **argv)
-{
-    glutInit(&argc, argv);
-
-    MyWindow w("test window");
-    OtherWindow w2("test window 2");
-    w.setX(550);
-    w2.setWidth(400);
-    w2.setHeight(600);
-    w.setTitle("MACIBAI");
-
-    glutMainLoop();
-}
+//int main(int argc, char **argv)
+//{
+//    glutInit(&argc, argv);
+//
+//    MyWindow w("test window");
+//    OtherWindow w2("test window 2");
+//    w.setX(550);
+//    w2.setWidth(400);
+//    w2.setHeight(600);
+//    w.setTitle("MACIBAI");
+//
+//    glutMainLoop();
+//}

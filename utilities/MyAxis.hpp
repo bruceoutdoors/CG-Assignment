@@ -1,7 +1,11 @@
 #ifndef MYAXIS_H
 #define MYAXIS_H
 
-#include <GL/glut.h>
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
+#include <GL/gl.h>
+#endif
 
 class MyAxis
 {

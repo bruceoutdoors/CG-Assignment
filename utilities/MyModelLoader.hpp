@@ -1,7 +1,11 @@
 #ifndef MYMODELLOADER_H
 #define MYMODELLOADER_H
 
-#include <GL/glut.h>
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
+#include <GL/gl.h>
+#endif
 #include <string>
 #include <vector>
 

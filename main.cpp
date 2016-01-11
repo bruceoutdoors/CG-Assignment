@@ -1,6 +1,11 @@
 #include "utilities/WypWindow.hpp"
 #include "AnimTestWorld.hpp"
 #include <iostream>
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/gl.h>
+#endif
 
 int main(int argc, char **argv)
 {
