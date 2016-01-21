@@ -83,7 +83,7 @@ std::vector<vec3> getDirections(const std::vector<vec3> &spline)
     directions.push_back(lastDirection);
 
     assert(spline.size() == directions.size());
-    
+
 
     return directions;
 }
@@ -105,10 +105,11 @@ vector<vec3> generateSpline(float start, float finish, int segments,
     return spline;
 }
 
-vector<vec3> getCircle(float radius, int segments, float start, float finish)
+vector<vec3> getCircle(float radius, int segments, float y, float start, float finish)
 {
     return generateSpline(start, finish, segments,
                          [&](float z)->float { return sin(z) * radius; },
-                         [&](float x)->float { return cos(x) * radius; });
+                         [&](float x)->float { return cos(x) * radius; },
+                         [&](float o)->float { return y; });
 }
 
