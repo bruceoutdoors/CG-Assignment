@@ -9,7 +9,6 @@
 #include "utilities/Drawable.hpp"
 #include "utilities/SplineAnimation.hpp"
 
-
 #include "FerrisMonster.hpp"
 
 #include <string>
@@ -33,4 +32,8 @@ public:
 
 private:
     FerrisMonster ferrismonster;
+    AnimationMaster am;
+    Mesh spaceship;
+    SplineAnimation *sa;
+    vector<vec3> spline;
 };

@@ -7,7 +7,9 @@ Mesh::Mesh() :
     isVertexColor(false),
     isFlatColor(true),
     isVisible(true),
-    name("Default Mesh Name")
+    name("Default Mesh Name"),
+    isTextured(false),
+    texture(nullptr)
 {
     resetTransformations();
 }
@@ -23,6 +25,7 @@ Mesh::Mesh(std::string path) : Mesh()
 
 Mesh::~Mesh()
 {
+    if (texture != nullptr) { delete texture; }
 }
 
 void Mesh::draw()
@@ -33,16 +36,23 @@ void Mesh::draw()
        [&]() {
            if (isFlatColor) glColor3fv(&flat_color[0]);
 
+           if (isTextured) {
+               glColor3f(1, 1, 1);
+               texture->use();
+               glEnable(GL_TEXTURE_2D);
+           }
+
            glBegin(GL_TRIANGLES);
             for (int j = 0; j < indices.size(); j++) {
                 GLushort i = indices[j];
-                if (isVertexColor) {
-                    glColor3fv(&colors[i][0]);
-                }
+                if (isVertexColor) glColor3fv(&colors[i][0]);
+                if (isTextured)    glTexCoord2fv(&uvs[i][0]);
                 glNormal3fv(&normals[i][0]);
                 glVertex3fv(&vertices[i][0]);
             }
             glEnd();
+
+            if (isTextured) { glDisable(GL_TEXTURE_2D); }
         }
     );
 }
@@ -115,4 +125,25 @@ void Mesh::setFlatColor(const vec3 &color)
 bool Mesh::hasUv() const
 {
     return !uvs.empty();
+}
+
+void Mesh::setTexture(const std::string &path)
+{
+    texture = new Texture(path);
+    enableTexture();
+}
+
+bool Mesh::hasTexture() const
+{
+    return isTextured;
+}
+
+void Mesh::enableTexture()
+{
+    isTextured = true;
+}
+
+void Mesh::disableTexture()
+{
+    isTextured = false;
 }
