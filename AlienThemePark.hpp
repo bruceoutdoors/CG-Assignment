@@ -34,4 +34,8 @@ public:
 private:
     FerrisMonster ferrismonster;
     RollerCoaster rollercoaster;
+    AnimationMaster am;
+    Mesh spaceship;
+    SplineAnimation *sa;
+    vector<vec3> spline;
 };

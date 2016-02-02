@@ -3,6 +3,7 @@
 #include "VecMatMath.hpp"
 #include "Transformable.hpp"
 #include "Selectable.hpp"
+#include "Texture.hpp"
 #include <vector>
 #include <string>
 #ifdef __APPLE__
@@ -35,6 +36,11 @@ public:
 
     bool hasUv() const;
 
+    void setTexture(const std::string &path);
+    bool hasTexture() const;
+    void enableTexture();
+    void disableTexture();
+
     bool getVisibility() const;
     void setVisibility(bool value);
 
@@ -52,8 +58,10 @@ private:
     bool isVertexColor;
     bool isFlatColor;
     bool isVisible;
+    bool isTextured;
     std::string name;
 
     vec3 flat_color;
+    Texture *texture;
 };
 
