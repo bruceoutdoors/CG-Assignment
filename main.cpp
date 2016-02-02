@@ -1,10 +1,10 @@
 #include "utilities/WypWindow.hpp"
-#include "AnimTestWorld.hpp"
+#include "AlienThemePark.hpp"
 #include <iostream>
 #ifdef __APPLE__
 #include <GLUT/GLUT.h>
 #else
-#include <GL/gl.h>
+#include <GL/glut.h>
 #endif
 
 int main(int argc, char **argv)
@@ -12,7 +12,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
 
     WypWindow w;
-    AnimTestWorld vw;
+    AlienThemePark vw;
     w.setVirtualWorld(&vw);
 
     glutMainLoop();

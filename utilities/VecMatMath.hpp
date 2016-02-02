@@ -1,11 +1,16 @@
 #pragma once
 
+#include <math.h>
 #include <cmath>
 #include <algorithm>
 #include <functional>
 #include <array>
 #include <vector>
 #include <float.h>
+
+#ifndef M_PI
+#define M_PI           3.14159265358979323846
+#endif
 
 typedef std::array<float, 3> vec3;
 typedef std::array<float, 2> vec2;

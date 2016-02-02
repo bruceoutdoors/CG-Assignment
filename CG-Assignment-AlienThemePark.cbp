@@ -31,8 +31,14 @@
 			<Add library="glut32" />
 			<Add directory="dependencies/glut/lib" />
 		</Linker>
-		<Unit filename="AnimTestWorld.cpp" />
-		<Unit filename="AnimTestWorld.hpp" />
+		<Unit filename="AlienThemePark.cpp" />
+		<Unit filename="AlienThemePark.hpp" />
+		<Unit filename="CurveTower.cpp" />
+		<Unit filename="CurveTower.hpp" />
+		<Unit filename="FerrisMonster.cpp" />
+		<Unit filename="FerrisMonster.hpp" />
+		<Unit filename="Tower.cpp" />
+		<Unit filename="Tower.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="utilities/Animatable.hpp" />
 		<Unit filename="utilities/AnimationMaster.cpp" />
@@ -44,6 +50,8 @@
 		<Unit filename="utilities/GlutManager.hpp" />
 		<Unit filename="utilities/GlutWindow.cpp" />
 		<Unit filename="utilities/GlutWindow.hpp" />
+		<Unit filename="utilities/Lathe.cpp" />
+		<Unit filename="utilities/Lathe.hpp" />
 		<Unit filename="utilities/Loft.cpp" />
 		<Unit filename="utilities/Loft.hpp" />
 		<Unit filename="utilities/Mesh.cpp" />
@@ -57,6 +65,8 @@
 		<Unit filename="utilities/MyVirtualWorld.hpp" />
 		<Unit filename="utilities/ObjReader.cpp" />
 		<Unit filename="utilities/ObjReader.hpp" />
+		<Unit filename="utilities/Replicate.cpp" />
+		<Unit filename="utilities/Replicate.hpp" />
 		<Unit filename="utilities/SelectMaster.cpp" />
 		<Unit filename="utilities/SelectMaster.hpp" />
 		<Unit filename="utilities/Selectable.cpp" />
