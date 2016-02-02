@@ -13,6 +13,7 @@ AlienThemePark::~AlienThemePark()
 void AlienThemePark::draw()
 {
     ferrismonster.draw();
+    rollercoaster.draw();
 
     glColor3f(0.5, 0.6, .8);
     glBegin(GL_QUADS);

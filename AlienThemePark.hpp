@@ -9,7 +9,7 @@
 #include "utilities/Drawable.hpp"
 #include "utilities/SplineAnimation.hpp"
 
-
+#include "RollerCoaster.hpp"
 #include "FerrisMonster.hpp"
 
 #include <string>
@@ -33,4 +33,5 @@ public:
 
 private:
     FerrisMonster ferrismonster;
+    RollerCoaster rollercoaster;
 };

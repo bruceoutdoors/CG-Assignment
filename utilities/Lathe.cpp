@@ -1,5 +1,9 @@
 #include "Lathe.hpp"
-#include "GL/gl.h"
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
+#include <GL/gl.h>
+#endif
 
 Lathe::Lathe(std::vector<vec2> points, int segments)
 {
@@ -52,7 +56,7 @@ void Lathe::draw()
     glEnd();
 
     // draw bottom cap:
-    int fin = lathePoints.size() - 1;
+    unsigned long fin = lathePoints.size() - 1;
     glBegin(GL_TRIANGLES);
     for (int j = 0; j < lathePoints[fin].size() - 1; j++) {
         glVertex3fv(&lathePoints[fin][j+1][0]);
