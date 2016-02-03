@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		269A5F0C1C621BA000ADF52B /* RollerCoaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 269A5F0B1C621BA000ADF52B /* RollerCoaster.cpp */; };
 		26AA606C1C61DD080063A832 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA606B1C61DD080063A832 /* main.cpp */; };
 		26AA60851C61DD6F0063A832 /* AlienThemePark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607A1C61DD6F0063A832 /* AlienThemePark.cpp */; };
 		26AA60861C61DD6F0063A832 /* AnimTestWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607B1C61DD6F0063A832 /* AnimTestWorld.cpp */; };
@@ -30,7 +31,6 @@
 		26AA60C51C61DDAD0063A832 /* MyVirtualWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60A61C61DDAD0063A832 /* MyVirtualWorld.cpp */; };
 		26AA60C61C61DDAD0063A832 /* ObjReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60A81C61DDAD0063A832 /* ObjReader.cpp */; };
 		26AA60C71C61DDAD0063A832 /* Replicate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60AA1C61DDAD0063A832 /* Replicate.cpp */; };
-		26AA60C81C61DDAD0063A832 /* RollerCoaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60AC1C61DDAD0063A832 /* RollerCoaster.cpp */; };
 		26AA60C91C61DDAD0063A832 /* Selectable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60AE1C61DDAD0063A832 /* Selectable.cpp */; };
 		26AA60CA1C61DDAD0063A832 /* SelectMaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60B01C61DDAD0063A832 /* SelectMaster.cpp */; };
 		26AA60CB1C61DDAD0063A832 /* SplineAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60B21C61DDAD0063A832 /* SplineAnimation.cpp */; };
@@ -61,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		269A5F0A1C621BA000ADF52B /* RollerCoaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RollerCoaster.hpp; sourceTree = "<group>"; };
+		269A5F0B1C621BA000ADF52B /* RollerCoaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RollerCoaster.cpp; sourceTree = "<group>"; };
 		26AA60681C61DD080063A832 /* OpenGL-Utilities */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OpenGL-Utilities"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AA606B1C61DD080063A832 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		26AA60721C61DD6F0063A832 /* AlienThemePark.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AlienThemePark.hpp; sourceTree = "<group>"; };
@@ -108,8 +110,6 @@
 		26AA60A91C61DDAD0063A832 /* ObjReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ObjReader.hpp; sourceTree = "<group>"; };
 		26AA60AA1C61DDAD0063A832 /* Replicate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Replicate.cpp; sourceTree = "<group>"; };
 		26AA60AB1C61DDAD0063A832 /* Replicate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Replicate.hpp; sourceTree = "<group>"; };
-		26AA60AC1C61DDAD0063A832 /* RollerCoaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RollerCoaster.cpp; sourceTree = "<group>"; };
-		26AA60AD1C61DDAD0063A832 /* RollerCoaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RollerCoaster.hpp; sourceTree = "<group>"; };
 		26AA60AE1C61DDAD0063A832 /* Selectable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Selectable.cpp; sourceTree = "<group>"; };
 		26AA60AF1C61DDAD0063A832 /* Selectable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Selectable.hpp; sourceTree = "<group>"; };
 		26AA60B01C61DDAD0063A832 /* SelectMaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectMaster.cpp; sourceTree = "<group>"; };
@@ -183,6 +183,8 @@
 				26AA60781C61DD6F0063A832 /* FerrisMonster.hpp */,
 				26AA60791C61DD6F0063A832 /* Tower.hpp */,
 				26AA607A1C61DD6F0063A832 /* AlienThemePark.cpp */,
+				269A5F0A1C621BA000ADF52B /* RollerCoaster.hpp */,
+				269A5F0B1C621BA000ADF52B /* RollerCoaster.cpp */,
 				26AA607B1C61DD6F0063A832 /* AnimTestWorld.cpp */,
 				26AA607C1C61DD6F0063A832 /* CGLab01.cpp */,
 				26AA607D1C61DD6F0063A832 /* CGLab01VirtualWorld.cpp */,
@@ -227,8 +229,6 @@
 				26AA60A91C61DDAD0063A832 /* ObjReader.hpp */,
 				26AA60AA1C61DDAD0063A832 /* Replicate.cpp */,
 				26AA60AB1C61DDAD0063A832 /* Replicate.hpp */,
-				26AA60AC1C61DDAD0063A832 /* RollerCoaster.cpp */,
-				26AA60AD1C61DDAD0063A832 /* RollerCoaster.hpp */,
 				26AA60AE1C61DDAD0063A832 /* Selectable.cpp */,
 				26AA60AF1C61DDAD0063A832 /* Selectable.hpp */,
 				26AA60B01C61DDAD0063A832 /* SelectMaster.cpp */,
@@ -309,8 +309,8 @@
 				26AA60CB1C61DDAD0063A832 /* SplineAnimation.cpp in Sources */,
 				26AA60891C61DD6F0063A832 /* CGLabmain.cpp in Sources */,
 				26AA60CA1C61DDAD0063A832 /* SelectMaster.cpp in Sources */,
+				269A5F0C1C621BA000ADF52B /* RollerCoaster.cpp in Sources */,
 				26AA60CF1C61DDAD0063A832 /* WypWindow.cpp in Sources */,
-				26AA60C81C61DDAD0063A832 /* RollerCoaster.cpp in Sources */,
 				26AA60C31C61DDAD0063A832 /* MyAxis.cpp in Sources */,
 				26AA608A1C61DD6F0063A832 /* CurveTower.cpp in Sources */,
 				26AA608D1C61DD6F0063A832 /* mathtestmain.cpp in Sources */,

@@ -8,7 +8,7 @@
 
 #ifndef RollerCoaster_hpp
 #define RollerCoaster_hpp
-#include "Drawable.hpp"
+#include "utilities/Drawable.hpp"
 class RollerCoaster : public Drawable{
 public:
     RollerCoaster();
