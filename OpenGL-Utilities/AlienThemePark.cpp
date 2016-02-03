@@ -44,6 +44,7 @@ void AlienThemePark::draw()
     glPopMatrix();
 
     ferrismonster.draw();
+    rollercoaster.draw();
 
     glColor3f(0.5, 0.6, .8);
     glBegin(GL_QUADS);

@@ -11,8 +11,10 @@
 
 #include "VecMatMath.hpp"
 #include <vector>
+#include "Animatable.hpp"
+#include "Drawable.hpp"
 
-class Loft {
+class Loft : public Drawable{
 public:
     Loft(const std::vector<vec2> &points, const std::vector<vec3> &path);
     void init();

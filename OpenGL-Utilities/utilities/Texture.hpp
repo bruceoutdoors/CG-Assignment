@@ -1,7 +1,11 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 #include <string>
 
 class ShaderMan;

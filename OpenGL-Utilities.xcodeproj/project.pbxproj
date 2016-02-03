@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26AA606C1C61DD080063A832 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA606B1C61DD080063A832 /* main.cpp */; };
+		26AA60851C61DD6F0063A832 /* AlienThemePark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607A1C61DD6F0063A832 /* AlienThemePark.cpp */; };
+		26AA60861C61DD6F0063A832 /* AnimTestWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607B1C61DD6F0063A832 /* AnimTestWorld.cpp */; };
+		26AA60871C61DD6F0063A832 /* CGLab01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607C1C61DD6F0063A832 /* CGLab01.cpp */; };
+		26AA60881C61DD6F0063A832 /* CGLab01VirtualWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607D1C61DD6F0063A832 /* CGLab01VirtualWorld.cpp */; };
+		26AA60891C61DD6F0063A832 /* CGLabmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607E1C61DD6F0063A832 /* CGLabmain.cpp */; };
+		26AA608A1C61DD6F0063A832 /* CurveTower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607F1C61DD6F0063A832 /* CurveTower.cpp */; };
+		26AA608B1C61DD6F0063A832 /* FerrisMonster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60801C61DD6F0063A832 /* FerrisMonster.cpp */; };
+		26AA608D1C61DD6F0063A832 /* mathtestmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60821C61DD6F0063A832 /* mathtestmain.cpp */; };
+		26AA608E1C61DD6F0063A832 /* Tower.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60831C61DD6F0063A832 /* Tower.cpp */; };
+		26AA608F1C61DD6F0063A832 /* windowtestmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60841C61DD6F0063A832 /* windowtestmain.cpp */; };
+		26AA60BC1C61DDAD0063A832 /* AnimationMaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60921C61DDAD0063A832 /* AnimationMaster.cpp */; };
+		26AA60BD1C61DDAD0063A832 /* Extrusion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60951C61DDAD0063A832 /* Extrusion.cpp */; };
+		26AA60BE1C61DDAD0063A832 /* GlutManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60971C61DDAD0063A832 /* GlutManager.cpp */; };
+		26AA60BF1C61DDAD0063A832 /* GlutWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60991C61DDAD0063A832 /* GlutWindow.cpp */; };
+		26AA60C01C61DDAD0063A832 /* Lathe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA609B1C61DDAD0063A832 /* Lathe.cpp */; };
+		26AA60C11C61DDAD0063A832 /* Loft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA609D1C61DDAD0063A832 /* Loft.cpp */; };
+		26AA60C21C61DDAD0063A832 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA609F1C61DDAD0063A832 /* Mesh.cpp */; };
+		26AA60C31C61DDAD0063A832 /* MyAxis.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60A21C61DDAD0063A832 /* MyAxis.cpp */; };
+		26AA60C41C61DDAD0063A832 /* MyModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60A41C61DDAD0063A832 /* MyModelLoader.cpp */; };
+		26AA60C51C61DDAD0063A832 /* MyVirtualWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60A61C61DDAD0063A832 /* MyVirtualWorld.cpp */; };
+		26AA60C61C61DDAD0063A832 /* ObjReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60A81C61DDAD0063A832 /* ObjReader.cpp */; };
+		26AA60C71C61DDAD0063A832 /* Replicate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60AA1C61DDAD0063A832 /* Replicate.cpp */; };
+		26AA60C81C61DDAD0063A832 /* RollerCoaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60AC1C61DDAD0063A832 /* RollerCoaster.cpp */; };
+		26AA60C91C61DDAD0063A832 /* Selectable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60AE1C61DDAD0063A832 /* Selectable.cpp */; };
+		26AA60CA1C61DDAD0063A832 /* SelectMaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60B01C61DDAD0063A832 /* SelectMaster.cpp */; };
+		26AA60CB1C61DDAD0063A832 /* SplineAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60B21C61DDAD0063A832 /* SplineAnimation.cpp */; };
+		26AA60CC1C61DDAD0063A832 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60B41C61DDAD0063A832 /* Texture.cpp */; };
+		26AA60CD1C61DDAD0063A832 /* Transformable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60B61C61DDAD0063A832 /* Transformable.cpp */; };
+		26AA60CE1C61DDAD0063A832 /* VecMatMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60B81C61DDAD0063A832 /* VecMatMath.cpp */; };
+		26AA60CF1C61DDAD0063A832 /* WypWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA60BA1C61DDAD0063A832 /* WypWindow.cpp */; };
+		26AA60DB1C61DDDA0063A832 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AA60DA1C61DDDA0063A832 /* OpenGL.framework */; };
+		26AA60DD1C61DDDE0063A832 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AA60DC1C61DDDE0063A832 /* GLUT.framework */; };
+		26AA60E11C61DDFF0063A832 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AA60DE1C61DDFF0063A832 /* sfml-window.framework */; };
+		26AA60E21C61DDFF0063A832 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AA60DF1C61DDFF0063A832 /* sfml-system.framework */; };
+		26AA60E31C61DDFF0063A832 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AA60E01C61DDFF0063A832 /* sfml-graphics.framework */; };
+		26AA60FA1C61DFE20063A832 /* data in Copy Files */ = {isa = PBXBuildFile; fileRef = 26AA60F91C61DFE20063A832 /* data */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		26AA60661C61DD080063A832 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				26AA60FA1C61DFE20063A832 /* data in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		26AA60681C61DD080063A832 /* OpenGL-Utilities */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OpenGL-Utilities"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26AA606B1C61DD080063A832 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		26AA60721C61DD6F0063A832 /* AlienThemePark.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AlienThemePark.hpp; sourceTree = "<group>"; };
+		26AA60731C61DD6F0063A832 /* AnimTestWorld.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimTestWorld.hpp; sourceTree = "<group>"; };
+		26AA60741C61DD6F0063A832 /* CGLab01.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CGLab01.hpp; sourceTree = "<group>"; };
+		26AA60751C61DD6F0063A832 /* CGLab01VirtualWorld.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CGLab01VirtualWorld.hpp; sourceTree = "<group>"; };
+		26AA60761C61DD6F0063A832 /* CGLabmain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CGLabmain.hpp; sourceTree = "<group>"; };
+		26AA60771C61DD6F0063A832 /* CurveTower.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CurveTower.hpp; sourceTree = "<group>"; };
+		26AA60781C61DD6F0063A832 /* FerrisMonster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FerrisMonster.hpp; sourceTree = "<group>"; };
+		26AA60791C61DD6F0063A832 /* Tower.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Tower.hpp; sourceTree = "<group>"; };
+		26AA607A1C61DD6F0063A832 /* AlienThemePark.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AlienThemePark.cpp; sourceTree = "<group>"; };
+		26AA607B1C61DD6F0063A832 /* AnimTestWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimTestWorld.cpp; sourceTree = "<group>"; };
+		26AA607C1C61DD6F0063A832 /* CGLab01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CGLab01.cpp; sourceTree = "<group>"; };
+		26AA607D1C61DD6F0063A832 /* CGLab01VirtualWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CGLab01VirtualWorld.cpp; sourceTree = "<group>"; };
+		26AA607E1C61DD6F0063A832 /* CGLabmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CGLabmain.cpp; sourceTree = "<group>"; };
+		26AA607F1C61DD6F0063A832 /* CurveTower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurveTower.cpp; sourceTree = "<group>"; };
+		26AA60801C61DD6F0063A832 /* FerrisMonster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FerrisMonster.cpp; sourceTree = "<group>"; };
+		26AA60821C61DD6F0063A832 /* mathtestmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mathtestmain.cpp; sourceTree = "<group>"; };
+		26AA60831C61DD6F0063A832 /* Tower.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tower.cpp; sourceTree = "<group>"; };
+		26AA60841C61DD6F0063A832 /* windowtestmain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = windowtestmain.cpp; sourceTree = "<group>"; };
+		26AA60911C61DDAD0063A832 /* Animatable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animatable.hpp; sourceTree = "<group>"; };
+		26AA60921C61DDAD0063A832 /* AnimationMaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimationMaster.cpp; sourceTree = "<group>"; };
+		26AA60931C61DDAD0063A832 /* AnimationMaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AnimationMaster.hpp; sourceTree = "<group>"; };
+		26AA60941C61DDAD0063A832 /* Drawable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Drawable.hpp; sourceTree = "<group>"; };
+		26AA60951C61DDAD0063A832 /* Extrusion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Extrusion.cpp; sourceTree = "<group>"; };
+		26AA60961C61DDAD0063A832 /* Extrusion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Extrusion.hpp; sourceTree = "<group>"; };
+		26AA60971C61DDAD0063A832 /* GlutManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlutManager.cpp; sourceTree = "<group>"; };
+		26AA60981C61DDAD0063A832 /* GlutManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GlutManager.hpp; sourceTree = "<group>"; };
+		26AA60991C61DDAD0063A832 /* GlutWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlutWindow.cpp; sourceTree = "<group>"; };
+		26AA609A1C61DDAD0063A832 /* GlutWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GlutWindow.hpp; sourceTree = "<group>"; };
+		26AA609B1C61DDAD0063A832 /* Lathe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Lathe.cpp; sourceTree = "<group>"; };
+		26AA609C1C61DDAD0063A832 /* Lathe.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lathe.hpp; sourceTree = "<group>"; };
+		26AA609D1C61DDAD0063A832 /* Loft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Loft.cpp; sourceTree = "<group>"; };
+		26AA609E1C61DDAD0063A832 /* Loft.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Loft.hpp; sourceTree = "<group>"; };
+		26AA609F1C61DDAD0063A832 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		26AA60A01C61DDAD0063A832 /* Mesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mesh.hpp; sourceTree = "<group>"; };
+		26AA60A11C61DDAD0063A832 /* MiscStructs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MiscStructs.hpp; sourceTree = "<group>"; };
+		26AA60A21C61DDAD0063A832 /* MyAxis.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyAxis.cpp; sourceTree = "<group>"; };
+		26AA60A31C61DDAD0063A832 /* MyAxis.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyAxis.hpp; sourceTree = "<group>"; };
+		26AA60A41C61DDAD0063A832 /* MyModelLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyModelLoader.cpp; sourceTree = "<group>"; };
+		26AA60A51C61DDAD0063A832 /* MyModelLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyModelLoader.hpp; sourceTree = "<group>"; };
+		26AA60A61C61DDAD0063A832 /* MyVirtualWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyVirtualWorld.cpp; sourceTree = "<group>"; };
+		26AA60A71C61DDAD0063A832 /* MyVirtualWorld.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MyVirtualWorld.hpp; sourceTree = "<group>"; };
+		26AA60A81C61DDAD0063A832 /* ObjReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ObjReader.cpp; sourceTree = "<group>"; };
+		26AA60A91C61DDAD0063A832 /* ObjReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ObjReader.hpp; sourceTree = "<group>"; };
+		26AA60AA1C61DDAD0063A832 /* Replicate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Replicate.cpp; sourceTree = "<group>"; };
+		26AA60AB1C61DDAD0063A832 /* Replicate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Replicate.hpp; sourceTree = "<group>"; };
+		26AA60AC1C61DDAD0063A832 /* RollerCoaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RollerCoaster.cpp; sourceTree = "<group>"; };
+		26AA60AD1C61DDAD0063A832 /* RollerCoaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RollerCoaster.hpp; sourceTree = "<group>"; };
+		26AA60AE1C61DDAD0063A832 /* Selectable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Selectable.cpp; sourceTree = "<group>"; };
+		26AA60AF1C61DDAD0063A832 /* Selectable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Selectable.hpp; sourceTree = "<group>"; };
+		26AA60B01C61DDAD0063A832 /* SelectMaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectMaster.cpp; sourceTree = "<group>"; };
+		26AA60B11C61DDAD0063A832 /* SelectMaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SelectMaster.hpp; sourceTree = "<group>"; };
+		26AA60B21C61DDAD0063A832 /* SplineAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplineAnimation.cpp; sourceTree = "<group>"; };
+		26AA60B31C61DDAD0063A832 /* SplineAnimation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SplineAnimation.hpp; sourceTree = "<group>"; };
+		26AA60B41C61DDAD0063A832 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		26AA60B51C61DDAD0063A832 /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
+		26AA60B61C61DDAD0063A832 /* Transformable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transformable.cpp; sourceTree = "<group>"; };
+		26AA60B71C61DDAD0063A832 /* Transformable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Transformable.hpp; sourceTree = "<group>"; };
+		26AA60B81C61DDAD0063A832 /* VecMatMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VecMatMath.cpp; sourceTree = "<group>"; };
+		26AA60B91C61DDAD0063A832 /* VecMatMath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VecMatMath.hpp; sourceTree = "<group>"; };
+		26AA60BA1C61DDAD0063A832 /* WypWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WypWindow.cpp; sourceTree = "<group>"; };
+		26AA60BB1C61DDAD0063A832 /* WypWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WypWindow.hpp; sourceTree = "<group>"; };
+		26AA60DA1C61DDDA0063A832 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		26AA60DC1C61DDDE0063A832 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		26AA60DE1C61DDFF0063A832 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
+		26AA60DF1C61DDFF0063A832 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		26AA60E01C61DDFF0063A832 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		26AA60F91C61DFE20063A832 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = "OpenGL-Utilities/data"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26AA60651C61DD080063A832 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AA60E11C61DDFF0063A832 /* sfml-window.framework in Frameworks */,
+				26AA60E21C61DDFF0063A832 /* sfml-system.framework in Frameworks */,
+				26AA60E31C61DDFF0063A832 /* sfml-graphics.framework in Frameworks */,
+				26AA60DD1C61DDDE0063A832 /* GLUT.framework in Frameworks */,
+				26AA60DB1C61DDDA0063A832 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26AA605F1C61DD080063A832 = {
+			isa = PBXGroup;
+			children = (
+				26AA60F91C61DFE20063A832 /* data */,
+				26AA60DE1C61DDFF0063A832 /* sfml-window.framework */,
+				26AA60DF1C61DDFF0063A832 /* sfml-system.framework */,
+				26AA60E01C61DDFF0063A832 /* sfml-graphics.framework */,
+				26AA60DC1C61DDDE0063A832 /* GLUT.framework */,
+				26AA60DA1C61DDDA0063A832 /* OpenGL.framework */,
+				26AA606A1C61DD080063A832 /* OpenGL-Utilities */,
+				26AA60691C61DD080063A832 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26AA60691C61DD080063A832 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26AA60681C61DD080063A832 /* OpenGL-Utilities */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26AA606A1C61DD080063A832 /* OpenGL-Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				26AA60901C61DDAD0063A832 /* utilities */,
+				26AA60721C61DD6F0063A832 /* AlienThemePark.hpp */,
+				26AA60731C61DD6F0063A832 /* AnimTestWorld.hpp */,
+				26AA60741C61DD6F0063A832 /* CGLab01.hpp */,
+				26AA60751C61DD6F0063A832 /* CGLab01VirtualWorld.hpp */,
+				26AA60761C61DD6F0063A832 /* CGLabmain.hpp */,
+				26AA60771C61DD6F0063A832 /* CurveTower.hpp */,
+				26AA60781C61DD6F0063A832 /* FerrisMonster.hpp */,
+				26AA60791C61DD6F0063A832 /* Tower.hpp */,
+				26AA607A1C61DD6F0063A832 /* AlienThemePark.cpp */,
+				26AA607B1C61DD6F0063A832 /* AnimTestWorld.cpp */,
+				26AA607C1C61DD6F0063A832 /* CGLab01.cpp */,
+				26AA607D1C61DD6F0063A832 /* CGLab01VirtualWorld.cpp */,
+				26AA607E1C61DD6F0063A832 /* CGLabmain.cpp */,
+				26AA607F1C61DD6F0063A832 /* CurveTower.cpp */,
+				26AA60801C61DD6F0063A832 /* FerrisMonster.cpp */,
+				26AA60821C61DD6F0063A832 /* mathtestmain.cpp */,
+				26AA60831C61DD6F0063A832 /* Tower.cpp */,
+				26AA60841C61DD6F0063A832 /* windowtestmain.cpp */,
+				26AA606B1C61DD080063A832 /* main.cpp */,
+			);
+			path = "OpenGL-Utilities";
+			sourceTree = "<group>";
+		};
+		26AA60901C61DDAD0063A832 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				26AA60911C61DDAD0063A832 /* Animatable.hpp */,
+				26AA60921C61DDAD0063A832 /* AnimationMaster.cpp */,
+				26AA60931C61DDAD0063A832 /* AnimationMaster.hpp */,
+				26AA60941C61DDAD0063A832 /* Drawable.hpp */,
+				26AA60951C61DDAD0063A832 /* Extrusion.cpp */,
+				26AA60961C61DDAD0063A832 /* Extrusion.hpp */,
+				26AA60971C61DDAD0063A832 /* GlutManager.cpp */,
+				26AA60981C61DDAD0063A832 /* GlutManager.hpp */,
+				26AA60991C61DDAD0063A832 /* GlutWindow.cpp */,
+				26AA609A1C61DDAD0063A832 /* GlutWindow.hpp */,
+				26AA609B1C61DDAD0063A832 /* Lathe.cpp */,
+				26AA609C1C61DDAD0063A832 /* Lathe.hpp */,
+				26AA609D1C61DDAD0063A832 /* Loft.cpp */,
+				26AA609E1C61DDAD0063A832 /* Loft.hpp */,
+				26AA609F1C61DDAD0063A832 /* Mesh.cpp */,
+				26AA60A01C61DDAD0063A832 /* Mesh.hpp */,
+				26AA60A11C61DDAD0063A832 /* MiscStructs.hpp */,
+				26AA60A21C61DDAD0063A832 /* MyAxis.cpp */,
+				26AA60A31C61DDAD0063A832 /* MyAxis.hpp */,
+				26AA60A41C61DDAD0063A832 /* MyModelLoader.cpp */,
+				26AA60A51C61DDAD0063A832 /* MyModelLoader.hpp */,
+				26AA60A61C61DDAD0063A832 /* MyVirtualWorld.cpp */,
+				26AA60A71C61DDAD0063A832 /* MyVirtualWorld.hpp */,
+				26AA60A81C61DDAD0063A832 /* ObjReader.cpp */,
+				26AA60A91C61DDAD0063A832 /* ObjReader.hpp */,
+				26AA60AA1C61DDAD0063A832 /* Replicate.cpp */,
+				26AA60AB1C61DDAD0063A832 /* Replicate.hpp */,
+				26AA60AC1C61DDAD0063A832 /* RollerCoaster.cpp */,
+				26AA60AD1C61DDAD0063A832 /* RollerCoaster.hpp */,
+				26AA60AE1C61DDAD0063A832 /* Selectable.cpp */,
+				26AA60AF1C61DDAD0063A832 /* Selectable.hpp */,
+				26AA60B01C61DDAD0063A832 /* SelectMaster.cpp */,
+				26AA60B11C61DDAD0063A832 /* SelectMaster.hpp */,
+				26AA60B21C61DDAD0063A832 /* SplineAnimation.cpp */,
+				26AA60B31C61DDAD0063A832 /* SplineAnimation.hpp */,
+				26AA60B41C61DDAD0063A832 /* Texture.cpp */,
+				26AA60B51C61DDAD0063A832 /* Texture.hpp */,
+				26AA60B61C61DDAD0063A832 /* Transformable.cpp */,
+				26AA60B71C61DDAD0063A832 /* Transformable.hpp */,
+				26AA60B81C61DDAD0063A832 /* VecMatMath.cpp */,
+				26AA60B91C61DDAD0063A832 /* VecMatMath.hpp */,
+				26AA60BA1C61DDAD0063A832 /* WypWindow.cpp */,
+				26AA60BB1C61DDAD0063A832 /* WypWindow.hpp */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26AA60671C61DD080063A832 /* OpenGL-Utilities */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26AA606F1C61DD080063A832 /* Build configuration list for PBXNativeTarget "OpenGL-Utilities" */;
+			buildPhases = (
+				26AA60641C61DD080063A832 /* Sources */,
+				26AA60651C61DD080063A832 /* Frameworks */,
+				26AA60661C61DD080063A832 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OpenGL-Utilities";
+			productName = "OpenGL-Utilities";
+			productReference = 26AA60681C61DD080063A832 /* OpenGL-Utilities */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26AA60601C61DD080063A832 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Yong Lian Hii";
+				TargetAttributes = {
+					26AA60671C61DD080063A832 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 26AA60631C61DD080063A832 /* Build configuration list for PBXProject "OpenGL-Utilities" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 26AA605F1C61DD080063A832;
+			productRefGroup = 26AA60691C61DD080063A832 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26AA60671C61DD080063A832 /* OpenGL-Utilities */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26AA60641C61DD080063A832 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AA60C61C61DDAD0063A832 /* ObjReader.cpp in Sources */,
+				26AA60CC1C61DDAD0063A832 /* Texture.cpp in Sources */,
+				26AA60C21C61DDAD0063A832 /* Mesh.cpp in Sources */,
+				26AA60CB1C61DDAD0063A832 /* SplineAnimation.cpp in Sources */,
+				26AA60891C61DD6F0063A832 /* CGLabmain.cpp in Sources */,
+				26AA60CA1C61DDAD0063A832 /* SelectMaster.cpp in Sources */,
+				26AA60CF1C61DDAD0063A832 /* WypWindow.cpp in Sources */,
+				26AA60C81C61DDAD0063A832 /* RollerCoaster.cpp in Sources */,
+				26AA60C31C61DDAD0063A832 /* MyAxis.cpp in Sources */,
+				26AA608A1C61DD6F0063A832 /* CurveTower.cpp in Sources */,
+				26AA608D1C61DD6F0063A832 /* mathtestmain.cpp in Sources */,
+				26AA608E1C61DD6F0063A832 /* Tower.cpp in Sources */,
+				26AA60C71C61DDAD0063A832 /* Replicate.cpp in Sources */,
+				26AA60BC1C61DDAD0063A832 /* AnimationMaster.cpp in Sources */,
+				26AA60CE1C61DDAD0063A832 /* VecMatMath.cpp in Sources */,
+				26AA60C11C61DDAD0063A832 /* Loft.cpp in Sources */,
+				26AA60CD1C61DDAD0063A832 /* Transformable.cpp in Sources */,
+				26AA60BE1C61DDAD0063A832 /* GlutManager.cpp in Sources */,
+				26AA606C1C61DD080063A832 /* main.cpp in Sources */,
+				26AA60881C61DD6F0063A832 /* CGLab01VirtualWorld.cpp in Sources */,
+				26AA60C01C61DDAD0063A832 /* Lathe.cpp in Sources */,
+				26AA60861C61DD6F0063A832 /* AnimTestWorld.cpp in Sources */,
+				26AA608F1C61DD6F0063A832 /* windowtestmain.cpp in Sources */,
+				26AA608B1C61DD6F0063A832 /* FerrisMonster.cpp in Sources */,
+				26AA60871C61DD6F0063A832 /* CGLab01.cpp in Sources */,
+				26AA60C41C61DDAD0063A832 /* MyModelLoader.cpp in Sources */,
+				26AA60BD1C61DDAD0063A832 /* Extrusion.cpp in Sources */,
+				26AA60C51C61DDAD0063A832 /* MyVirtualWorld.cpp in Sources */,
+				26AA60C91C61DDAD0063A832 /* Selectable.cpp in Sources */,
+				26AA60BF1C61DDAD0063A832 /* GlutWindow.cpp in Sources */,
+				26AA60851C61DD6F0063A832 /* AlienThemePark.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		26AA606D1C61DD080063A832 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		26AA606E1C61DD080063A832 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		26AA60701C61DD080063A832 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26AA60711C61DD080063A832 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26AA60631C61DD080063A832 /* Build configuration list for PBXProject "OpenGL-Utilities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26AA606D1C61DD080063A832 /* Debug */,
+				26AA606E1C61DD080063A832 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26AA606F1C61DD080063A832 /* Build configuration list for PBXNativeTarget "OpenGL-Utilities" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26AA60701C61DD080063A832 /* Debug */,
+				26AA60711C61DD080063A832 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26AA60601C61DD080063A832 /* Project object */;
+}
