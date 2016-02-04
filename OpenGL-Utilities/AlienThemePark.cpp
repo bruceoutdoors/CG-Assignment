@@ -31,6 +31,19 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
 
     am.addAnimatable(sa);
     am.addAnimatable(fa);
+
+    wypwindow->getOnKeyboardSignal()->connect([&](unsigned char c)
+    {
+        cout << c;
+    });
+
+    wypwindow->getOnMouseSignal()->connect(
+        [&](int button, int state, int x, int y)
+    {
+        if (state == GLUT_UP) {
+            cout << "click: " << x << " " << y << endl;
+        }
+    });
 }
 
 AlienThemePark::~AlienThemePark()
