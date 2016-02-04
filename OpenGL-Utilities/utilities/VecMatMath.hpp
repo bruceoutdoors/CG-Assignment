@@ -108,6 +108,14 @@ T negative(const T &a)
     return neg;
 }
 
+template<typename T>
+T scalaMult(const T &a, int scalar) {
+    for(int i = 0 ; i < a.size(); i++) {
+        a *= scalar;
+    }
+    return a;
+}
+
 template<typename T, typename R = typename T::value_type>
 T findCenter(const std::vector<T> &pts)
 {
@@ -125,4 +133,38 @@ T findCenter(const std::vector<T> &pts)
     }
 
     return applyVecOp<T, R>(minVec, maxVec, [](const R &p, const R &q)->R { return (p + q) / 2; });
+}
+template<typename T>
+long long getDistance(std::vector<T> points) {
+    long long sum_distance;
+    for(int i = 1 ; i < points.size() ; i++) {
+        for (int j = 0; j < points[i].size(); j++) {
+             sum_distance += points[ i ][j] - points[i - 1][j];
+        }
+    }
+    return sqrt(sum_distance);
+}
+
+std::vector<vec3> Bezier( vec3 point0,vec3 point1,vec3 point2,vec3 point3) {
+    std::vector<vec3> points;
+    
+    if (getDistance(std::vector<vec3>{point0,point1,point2,point3})) {
+        points = {point0,point1,point2,point3};
+        return points;
+    }
+    vec3 point01 = scalaMult(add(point0, point1), 0.5);
+    vec3 point12 = scalaMult(add(point1, point2), 0.5);
+    vec3 point23 = scalaMult(add(point2, point3), 0.5);
+    vec3 pointA =scalaMult(add(point01, point12), 0.5);
+    vec3 pointB =scalaMult(add(point12, point23), 0.5);
+    vec3 pointAB =scalaMult(add(pointA, pointB), 0.5);
+    std::vector<vec3> tempvec = Bezier(point0,point01, pointA, pointAB);
+    std::vector<vec3> tempvec2 = Bezier(pointAB, pointB, point23, point3);
+    
+    points.reserve( tempvec.size() + tempvec2.size() ); // preallocate memory
+    points.insert( points.end(), tempvec.begin(), tempvec.end() ); // combine points and tempvec
+    points.insert( points.end(), tempvec2.begin(), tempvec2.end() ); //ditto
+    
+    return points;
+    
 }
