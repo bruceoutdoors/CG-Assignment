@@ -28,7 +28,7 @@ using namespace std;
 class AlienThemePark : public MyVirtualWorld
 {
 public:
-    AlienThemePark();
+    AlienThemePark(WypWindow *wypwindow);
     virtual ~AlienThemePark();
     void draw() override;
 

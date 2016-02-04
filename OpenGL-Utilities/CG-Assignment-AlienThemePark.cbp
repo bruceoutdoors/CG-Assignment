@@ -80,6 +80,7 @@
 		<Unit filename="utilities/SelectMaster.hpp" />
 		<Unit filename="utilities/Selectable.cpp" />
 		<Unit filename="utilities/Selectable.hpp" />
+		<Unit filename="utilities/Signal.hpp" />
 		<Unit filename="utilities/SplineAnimation.cpp" />
 		<Unit filename="utilities/SplineAnimation.hpp" />
 		<Unit filename="utilities/Texture.cpp" />

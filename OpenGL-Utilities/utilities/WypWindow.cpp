@@ -133,6 +133,8 @@ void WypWindow::onKeyboard(unsigned char key, int x, int y)
     }
 
     world.move(xinc, yinc, zinc);
+
+    onKeyboardSignal.broadcast(key);
 }
 
 void WypWindow::onSpecial(int key, int x, int y)
@@ -158,6 +160,8 @@ void WypWindow::onSpecial(int key, int x, int y)
                              else  glEnable(GL_LIGHTING);
                           break;
     }
+
+    onSpecialSignal.broadcast(key);
 }
 
 void WypWindow::onMotion(int x, int y)
@@ -177,6 +181,8 @@ void WypWindow::onMotion(int x, int y)
     setting.mouseX = x;
     setting.mouseY = y;
     glutPostRedisplay();
+
+    onMotionSignal.broadcast(x, y);
 }
 
 void WypWindow::onMouse(int button, int state, int x, int y)
@@ -213,6 +219,8 @@ void WypWindow::onMouse(int button, int state, int x, int y)
        }
        break;
     }
+
+    onMouseSignal.broadcast(button, state, x, y);
 }
 
 void WypWindow::welcome()
@@ -258,4 +266,31 @@ void WypWindow::onReshape(int width, int height)
     this->height = height;
     viewer.aspectRatio = static_cast<GLdouble> (width) / height;
     viewingInit();
+
+    onReshapeSignal.broadcast(width, height);
+}
+
+Signal<unsigned char> *WypWindow::getOnKeyboardSignal()
+{
+    return &onKeyboardSignal;
+}
+
+Signal<int> *WypWindow::getOnSpecialSignal()
+{
+    return &onSpecialSignal;
+}
+
+Signal<int, int> *WypWindow::getOnMotionSignal()
+{
+    return &onMotionSignal;
+}
+
+Signal<int, int, int, int> *WypWindow::getOnMouseSignal()
+{
+    return &onMouseSignal;
+}
+
+Signal<int, int> *WypWindow::getOnReshapeSignal()
+{
+    return &onReshapeSignal;
 }

@@ -1,6 +1,10 @@
 #include "AlienThemePark.hpp"
+#include <iostream>
 
-AlienThemePark::AlienThemePark() :
+using namespace std;
+
+AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
+    MyVirtualWorld(wypwindow),
     spaceship("data/dark_fighter_6.obj"),
     spaceCruiser("data/space_cruiser_4.obj")
 {

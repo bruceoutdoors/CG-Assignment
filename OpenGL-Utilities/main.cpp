@@ -12,8 +12,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
 
     WypWindow w;
-    AlienThemePark vw;
-    w.setVirtualWorld(&vw);
+    AlienThemePark vw(&w);
 
     glutMainLoop();
 }

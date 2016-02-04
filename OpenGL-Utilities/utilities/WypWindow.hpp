@@ -4,6 +4,8 @@
 #include "GlutWindow.hpp"
 #include "MyAxis.hpp"
 #include "MyVirtualWorld.hpp"
+#include "Signal.hpp"
+
 #ifdef __APPLE__
 #include <GLUT/GLUT.h>
 #else
@@ -49,6 +51,12 @@ public:
     void onMouse(int button, int state, int x, int y) override;
     void onReshape(int width, int height) override;
 
+    Signal<unsigned char> *getOnKeyboardSignal();
+    Signal<int> *getOnSpecialSignal();
+    Signal<int, int> *getOnMotionSignal();
+    Signal<int, int, int, int> *getOnMouseSignal();
+    Signal<int, int> *getOnReshapeSignal();
+
     void setVirtualWorld(MyVirtualWorld *vw);
     SelectMaster *getSelectMaster();
 
@@ -57,6 +65,12 @@ private:
     void viewingInit();
     void lightingInit();
     void welcome();
+
+    Signal<unsigned char> onKeyboardSignal;
+    Signal<int> onSpecialSignal;
+    Signal<int, int> onMotionSignal;
+    Signal<int, int, int, int> onMouseSignal;
+    Signal<int, int> onReshapeSignal;
 
     World    world;
     Viewer   viewer;
