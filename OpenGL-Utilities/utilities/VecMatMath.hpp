@@ -109,11 +109,12 @@ T negative(const T &a)
 }
 
 template<typename T>
-T scalaMult(const T &a, int scalar) {
+T scalaMult(T a, int scalar) {
+    T result;
     for(int i = 0 ; i < a.size(); i++) {
-        a *= scalar;
+        result[i] = a[i] * scalar;
     }
-    return a;
+    return result;
 }
 
 template<typename T, typename R = typename T::value_type>
@@ -145,7 +146,8 @@ long long getDistance(std::vector<T> points) {
     return sqrt(sum_distance);
 }
 
-std::vector<vec3> Bezier( vec3 point0,vec3 point1,vec3 point2,vec3 point3) {
+template<typename T>
+std::vector<vec3> bezierFunction( vec3 point0,vec3 point1,vec3 point2,vec3 point3) {
     std::vector<vec3> points;
     
     if (getDistance(std::vector<vec3>{point0,point1,point2,point3})) {
@@ -158,8 +160,8 @@ std::vector<vec3> Bezier( vec3 point0,vec3 point1,vec3 point2,vec3 point3) {
     vec3 pointA =scalaMult(add(point01, point12), 0.5);
     vec3 pointB =scalaMult(add(point12, point23), 0.5);
     vec3 pointAB =scalaMult(add(pointA, pointB), 0.5);
-    std::vector<vec3> tempvec = Bezier(point0,point01, pointA, pointAB);
-    std::vector<vec3> tempvec2 = Bezier(pointAB, pointB, point23, point3);
+    std::vector<vec3> tempvec = bezierFunction<vec3>(point0,point01, pointA, pointAB);
+    std::vector<vec3> tempvec2 = bezierFunction<vec3>(pointAB, pointB, point23, point3);
     
     points.reserve( tempvec.size() + tempvec2.size() ); // preallocate memory
     points.insert( points.end(), tempvec.begin(), tempvec.end() ); // combine points and tempvec
