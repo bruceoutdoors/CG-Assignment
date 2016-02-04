@@ -7,25 +7,25 @@
 //
 
 #include "RollerCoaster.hpp"
-#include "VecMatMath.hpp"
-#include "Loft.hpp"
+#include "utilities/VecMatMath.hpp"
+#include "utilities/Loft.hpp"
 #include <vector>
 #include <iostream>
 #include <random>
 RollerCoaster::RollerCoaster() {
-    
+
 }
 void RollerCoaster::draw() {
-    
+
     auto spline = generateSpline(-25, 25, 150,
                             [](float z)->float { return sin(z/2.0) * 15; },
                             [](float x)->float { return cos(x/2.0) * 15; },
                             [](float y)->float { return y; });
-    std::vector<vec2> shape = { {0,0} , {2,2}, {4,4}};
-    
+    std::vector<vec2> shape = { {{0,0}}, {{2,2}}, {{4,4}} };
+
     auto loft = new Loft(shape,spline);
     loft->draw();
-    
-    
-    
+
+
+
 }

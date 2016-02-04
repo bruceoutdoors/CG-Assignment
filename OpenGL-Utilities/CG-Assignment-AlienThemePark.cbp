@@ -24,12 +24,17 @@
 			<Add option="-std=c++11" />
 			<Add option="-g" />
 			<Add directory="dependencies/glut/include" />
+			<Add directory="dependencies/sfml/include" />
 		</Compiler>
 		<Linker>
 			<Add library="opengl32" />
 			<Add library="glu32" />
 			<Add library="glut32" />
+			<Add library="sfml-graphics" />
+			<Add library="sfml-system" />
+			<Add library="sfml-window" />
 			<Add directory="dependencies/glut/lib" />
+			<Add directory="dependencies/sfml/lib" />
 		</Linker>
 		<Unit filename="AlienThemePark.cpp" />
 		<Unit filename="AlienThemePark.hpp" />
@@ -37,6 +42,8 @@
 		<Unit filename="CurveTower.hpp" />
 		<Unit filename="FerrisMonster.cpp" />
 		<Unit filename="FerrisMonster.hpp" />
+		<Unit filename="RollerCoaster.cpp" />
+		<Unit filename="RollerCoaster.hpp" />
 		<Unit filename="Tower.cpp" />
 		<Unit filename="Tower.hpp" />
 		<Unit filename="main.cpp" />
@@ -73,6 +80,8 @@
 		<Unit filename="utilities/Selectable.hpp" />
 		<Unit filename="utilities/SplineAnimation.cpp" />
 		<Unit filename="utilities/SplineAnimation.hpp" />
+		<Unit filename="utilities/Texture.cpp" />
+		<Unit filename="utilities/Texture.hpp" />
 		<Unit filename="utilities/Transformable.cpp" />
 		<Unit filename="utilities/Transformable.hpp" />
 		<Unit filename="utilities/VecMatMath.cpp" />
