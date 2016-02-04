@@ -1,6 +1,8 @@
 #include "AlienThemePark.hpp"
 
-AlienThemePark::AlienThemePark() : spaceship("data/dark_fighter_6.obj")
+AlienThemePark::AlienThemePark() :
+    spaceship("data/dark_fighter_6.obj"),
+    spaceCruiser("data/space_cruiser_4.obj")
 {
     spline = generateSpline(-25, 10, 150,
                             [](float z)->float { return sin(z/2.0) * 15; },
@@ -8,6 +10,7 @@ AlienThemePark::AlienThemePark() : spaceship("data/dark_fighter_6.obj")
                             [](float y)->float { return y + 20; });
 
     sa = new SplineAnimation(&spline, 10);
+    fa = new FloatingAnimation(1.2, .6);
 
     spaceship.setFlatColor({{.9, .3, .9}});
     spaceship.disableFlatColor();
@@ -15,12 +18,21 @@ AlienThemePark::AlienThemePark() : spaceship("data/dark_fighter_6.obj")
     spaceship.addTransformation(sa->getTransformable());
     spaceship.setTexture("data/dark_fighter_6_color.png");
 
+    spaceCruiser.setTexture("data/space_cruiser_4_color.png");
+    spaceCruiser.disableFlatColor();
+    spaceCruiser.addTransformation(fa->getTransformable());
+    spaceCruiser.setScale(.5);
+    spaceCruiser.setTranslateZ(25);
+    spaceCruiser.setTranslateY(10);
+
     am.addAnimatable(sa);
+    am.addAnimatable(fa);
 }
 
 AlienThemePark::~AlienThemePark()
 {
-
+    delete sa;
+    delete fa;
 }
 
 void AlienThemePark::draw()
@@ -41,6 +53,7 @@ void AlienThemePark::draw()
 
     glPushMatrix();
         spaceship.draw();
+        spaceCruiser.draw();
     glPopMatrix();
 
     ferrismonster.draw();

@@ -8,6 +8,7 @@
 #include "utilities/AnimationMaster.hpp"
 #include "utilities/Drawable.hpp"
 #include "utilities/SplineAnimation.hpp"
+#include "utilities/FloatingAnimation.hpp"
 
 #include "RollerCoaster.hpp"
 #include "FerrisMonster.hpp"
@@ -36,6 +37,8 @@ private:
     RollerCoaster rollercoaster;
     AnimationMaster am;
     Mesh spaceship;
+    Mesh spaceCruiser;
     SplineAnimation *sa;
+    FloatingAnimation *fa;
     vector<vec3> spline;
 };

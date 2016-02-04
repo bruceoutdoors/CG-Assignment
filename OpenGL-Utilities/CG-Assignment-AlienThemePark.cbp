@@ -53,6 +53,8 @@
 		<Unit filename="utilities/Drawable.hpp" />
 		<Unit filename="utilities/Extrusion.cpp" />
 		<Unit filename="utilities/Extrusion.hpp" />
+		<Unit filename="utilities/FloatingAnimation.cpp" />
+		<Unit filename="utilities/FloatingAnimation.hpp" />
 		<Unit filename="utilities/GlutManager.cpp" />
 		<Unit filename="utilities/GlutManager.hpp" />
 		<Unit filename="utilities/GlutWindow.cpp" />
