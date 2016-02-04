@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2672D2E81C630B880028844D /* FloatingAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2672D2E61C630B880028844D /* FloatingAnimation.cpp */; };
 		269A5F0C1C621BA000ADF52B /* RollerCoaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 269A5F0B1C621BA000ADF52B /* RollerCoaster.cpp */; };
 		26AA606C1C61DD080063A832 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA606B1C61DD080063A832 /* main.cpp */; };
 		26AA60851C61DD6F0063A832 /* AlienThemePark.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26AA607A1C61DD6F0063A832 /* AlienThemePark.cpp */; };
@@ -61,6 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2672D2E61C630B880028844D /* FloatingAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FloatingAnimation.cpp; sourceTree = "<group>"; };
+		2672D2E71C630B880028844D /* FloatingAnimation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FloatingAnimation.hpp; sourceTree = "<group>"; };
 		269A5F0A1C621BA000ADF52B /* RollerCoaster.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RollerCoaster.hpp; sourceTree = "<group>"; };
 		269A5F0B1C621BA000ADF52B /* RollerCoaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RollerCoaster.cpp; sourceTree = "<group>"; };
 		26AA60681C61DD080063A832 /* OpenGL-Utilities */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "OpenGL-Utilities"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +205,8 @@
 		26AA60901C61DDAD0063A832 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2672D2E61C630B880028844D /* FloatingAnimation.cpp */,
+				2672D2E71C630B880028844D /* FloatingAnimation.hpp */,
 				26AA60911C61DDAD0063A832 /* Animatable.hpp */,
 				26AA60921C61DDAD0063A832 /* AnimationMaster.cpp */,
 				26AA60931C61DDAD0063A832 /* AnimationMaster.hpp */,
@@ -329,6 +334,7 @@
 				26AA608B1C61DD6F0063A832 /* FerrisMonster.cpp in Sources */,
 				26AA60871C61DD6F0063A832 /* CGLab01.cpp in Sources */,
 				26AA60C41C61DDAD0063A832 /* MyModelLoader.cpp in Sources */,
+				2672D2E81C630B880028844D /* FloatingAnimation.cpp in Sources */,
 				26AA60BD1C61DDAD0063A832 /* Extrusion.cpp in Sources */,
 				26AA60C51C61DDAD0063A832 /* MyVirtualWorld.cpp in Sources */,
 				26AA60C91C61DDAD0063A832 /* Selectable.cpp in Sources */,
