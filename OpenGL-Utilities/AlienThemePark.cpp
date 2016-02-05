@@ -57,7 +57,11 @@ void AlienThemePark::draw()
     am.update();
 
     glPushMatrix();
+
+    GLboolean lightingIsOn;
+    glGetBooleanv(GL_LIGHTING, &lightingIsOn);
     glDisable(GL_LIGHTING);
+
     glBegin(GL_LINES);
     glColor3f(1.0, 1.0, 0.0);
     for (int i = 0; i < spline.size()-1; i++) {
@@ -65,7 +69,8 @@ void AlienThemePark::draw()
         glVertex3fv(&spline[i+1][0]);
     }
     glEnd();
-    glEnable(GL_LIGHTING);
+
+    if (lightingIsOn) glEnable(GL_LIGHTING);
     glPopMatrix();
 
     glPushMatrix();
