@@ -5,6 +5,8 @@
 #include "MyAxis.hpp"
 #include "MyVirtualWorld.hpp"
 #include "Signal.hpp"
+#include "Selectable.hpp"
+#include "SelectMaster.hpp"
 
 #ifdef __APPLE__
 #include <GLUT/GLUT.h>
@@ -36,8 +38,6 @@ struct MySetting
     bool shadingMode;
 };
 
-class SelectMaster;
-
 class WypWindow : public GlutWindow
 {
 public:
@@ -56,6 +56,7 @@ public:
     Signal<int, int> *getOnMotionSignal();
     Signal<int, int, int, int> *getOnMouseSignal();
     Signal<int, int> *getOnReshapeSignal();
+    Signal<Selectable*> *getOnSelectSignal();
 
     void setVirtualWorld(MyVirtualWorld *vw);
     SelectMaster *getSelectMaster();
@@ -71,6 +72,7 @@ private:
     Signal<int, int> onMotionSignal;
     Signal<int, int, int, int> onMouseSignal;
     Signal<int, int> onReshapeSignal;
+    Signal<Selectable*> onSelectSignal;
 
     World    world;
     Viewer   viewer;

@@ -16,6 +16,7 @@ public:
     GLuint getId() const;
 
     virtual void drawSelector();
+    virtual void drawHighlight() {}
 
     static Selectable* getSelectable(const GLuint id);
 

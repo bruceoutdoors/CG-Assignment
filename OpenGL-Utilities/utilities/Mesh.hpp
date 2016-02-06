@@ -21,6 +21,7 @@ public:
     Mesh(std::string path);
     virtual ~Mesh();
     void draw() override;
+    void drawHighlight() override;
 
     GLuint getNumIndices() const;
     GLuint getNumVertices() const;

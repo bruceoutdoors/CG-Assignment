@@ -38,7 +38,9 @@ private:
     AnimationMaster am;
     Mesh spaceship;
     Mesh spaceCruiser;
+    Mesh elephant;
     SplineAnimation *sa;
     FloatingAnimation *fa;
+    Mesh *activeSelect;
     vector<vec3> spline;
 };

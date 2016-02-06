@@ -57,6 +57,27 @@ void Mesh::draw()
     );
 }
 
+void Mesh::drawHighlight()
+{
+    static vec3 white = {{ 1, 1, 1 }};
+    glColor3fv(&white[0]);
+
+    GLboolean lightingIsOn;
+    glGetBooleanv(GL_LIGHTING, &lightingIsOn);
+    glDisable(GL_LIGHTING);
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    disableTexture();
+    glLineWidth(1.5f);
+    draw();
+    glLineWidth(1);
+    enableTexture();
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
+    if (lightingIsOn == GL_TRUE) glEnable(GL_LIGHTING);
+}
+
+
 bool Mesh::getVisibility() const
 {
     return isVisible;

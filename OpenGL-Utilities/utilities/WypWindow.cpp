@@ -1,5 +1,4 @@
 #include "WypWindow.hpp"
-#include "SelectMaster.hpp"
 #include "Mesh.hpp"
 #include <iostream>
 
@@ -140,10 +139,12 @@ void WypWindow::onKeyboard(unsigned char key, int x, int y)
 void WypWindow::onSpecial(int key, int x, int y)
 {
     switch (key) {
+    /*
     case GLUT_KEY_DOWN  : world.rotateX -= setting.angleInc;  break;
     case GLUT_KEY_UP    : world.rotateX += setting.angleInc;  break;
     case GLUT_KEY_LEFT  : world.rotateY -= setting.angleInc;  break;
     case GLUT_KEY_RIGHT : world.rotateY += setting.angleInc;  break;
+    */
     case GLUT_KEY_HOME  : dataInit(); break;
     case GLUT_KEY_F1    : setting.shadingMode = !setting.shadingMode;
                           if (setting.shadingMode)
@@ -207,11 +208,7 @@ void WypWindow::onMouse(int button, int state, int x, int y)
           setting.mouseLeftMode = true;
 
           Selectable *s = selMaster->getSelect(x, y);
-          // selMaster->removeSelectable(s);
-          if (s) {
-            Mesh *m = dynamic_cast<Mesh*>(s);
-            if (m) std::cout << m->getName() << std::endl;
-          }
+          onSelectSignal.broadcast(s);
        }
 
        if (state == GLUT_UP &&  setting.mouseLeftMode) {
@@ -234,7 +231,7 @@ void WypWindow::welcome()
     << "*****************************************************************\n"
     << "| Press:                                                        |\n"
     << "|   <a>,<d>,<w>,<s>,<q>,<e> => move world                       |\n"
-    << "|   <arrows>                => rotate world                     |\n"
+//    << "|   <arrows>                => rotate world                     |\n"
     << "|   HOME                    => restore defaults                 |\n"
     << "|   ESC                     => exit                             |\n"
     << "|                                                               |\n"
@@ -293,4 +290,10 @@ Signal<int, int, int, int> *WypWindow::getOnMouseSignal()
 Signal<int, int> *WypWindow::getOnReshapeSignal()
 {
     return &onReshapeSignal;
+}
+
+
+Signal<Selectable*> *WypWindow::getOnSelectSignal()
+{
+    return &onSelectSignal;
 }

@@ -5,8 +5,10 @@ using namespace std;
 
 AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     MyVirtualWorld(wypwindow),
+    activeSelect(nullptr),
     spaceship("data/dark_fighter_6.obj"),
-    spaceCruiser("data/space_cruiser_4.obj")
+    spaceCruiser("data/space_cruiser_4.obj"),
+    elephant("data/elephant-triangulated.obj")
 {
     spline = generateSpline(-25, 10, 150,
                             [](float z)->float { return sin(z/2.0) * 15; },
@@ -23,14 +25,59 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     spaceship.setTexture("data/dark_fighter_6_color.png");
 
     spaceCruiser.setTexture("data/space_cruiser_4_color.png");
+    spaceCruiser.setName("Space Cruiser");
     spaceCruiser.disableFlatColor();
     spaceCruiser.addTransformation(fa->getTransformable());
     spaceCruiser.setScale(.5);
     spaceCruiser.setTranslateZ(25);
     spaceCruiser.setTranslateY(10);
 
+    elephant.setTexture("data/elephant-texture-1024.jpg");
+    elephant.setName("Gook the elephant");
+    elephant.disableFlatColor();
+    elephant.setTranslateX(20);
+    elephant.setTranslateZ(25);
+
     am.addAnimatable(sa);
     am.addAnimatable(fa);
+
+    SelectMaster *sm = wypwindow->getSelectMaster();
+    sm->addSelectable(&spaceCruiser);
+    sm->addSelectable(&spaceship);
+    sm->addSelectable(&elephant);
+
+
+    wypwindow->getOnSelectSignal()->connect([&](Selectable *s)
+    {
+        Mesh *m = dynamic_cast<Mesh*>(s);
+        if (m != nullptr) {
+            activeSelect = m;
+            cout << "Mesh Selected: " << m->getName() << endl;
+        } else {
+            activeSelect = nullptr;
+        }
+
+    });
+
+    wypwindow->getOnSpecialSignal()->connect([&](int key)
+    {
+        if (activeSelect == nullptr) return;
+
+        switch(key) {
+        case GLUT_KEY_DOWN  :
+            activeSelect->setTranslateX(activeSelect->getTranslateX() + .5);
+            break;
+        case GLUT_KEY_UP    :
+            activeSelect->setTranslateX(activeSelect->getTranslateX() - .5);
+            break;
+        case GLUT_KEY_LEFT  :
+            activeSelect->setTranslateZ(activeSelect->getTranslateZ() + .5);
+            break;
+        case GLUT_KEY_RIGHT :
+            activeSelect->setTranslateZ(activeSelect->getTranslateZ() - .5);
+            break;
+        }
+    });
 
     wypwindow->getOnKeyboardSignal()->connect([&](unsigned char c)
     {
@@ -76,6 +123,10 @@ void AlienThemePark::draw()
     glPushMatrix();
         spaceship.draw();
         spaceCruiser.draw();
+        elephant.draw();
+
+        if (activeSelect != nullptr) activeSelect->drawHighlight();
+
     glPopMatrix();
 
     ferrismonster.draw();
