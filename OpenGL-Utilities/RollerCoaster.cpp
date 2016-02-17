@@ -13,14 +13,15 @@
 #include <iostream>
 #include <random>
 RollerCoaster::RollerCoaster() {
+    spline = generateSpline(-25, 25, 150,
+                                 [](float z)->float { return sin(z/2.0) * 15; },
+                                 [](float x)->float { return cos(x/2.0) * 15; },
+                                 [](float y)->float { return y; });
 
 }
 void RollerCoaster::draw() {
 
-    auto spline = generateSpline(-25, 25, 150,
-                            [](float z)->float { return sin(z/2.0) * 15; },
-                            [](float x)->float { return cos(x/2.0) * 15; },
-                            [](float y)->float { return y; });
+
     std::vector<vec2> shape = { {{0,0}}, {{2,2}}, {{4,4}} };
 
     auto loft = new Loft(shape,spline);
@@ -28,4 +29,21 @@ void RollerCoaster::draw() {
 
 
 
+}
+void RollerCoaster::drawHighlight() {
+    std::cout << "IM BEING CLIEKD" << std::endl;
+    static vec3 white = {{ 1, 1, 1 }};
+    glColor3fv(&white[0]);
+    
+    GLboolean lightingIsOn;
+    glGetBooleanv(GL_LIGHTING, &lightingIsOn);
+    glDisable(GL_LIGHTING);
+    
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glLineWidth(1.5f);
+    draw();
+    glLineWidth(1);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    
+    if (lightingIsOn == GL_TRUE) glEnable(GL_LIGHTING);
 }

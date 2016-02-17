@@ -45,6 +45,7 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     sm->addSelectable(&spaceCruiser);
     sm->addSelectable(&spaceship);
     sm->addSelectable(&elephant);
+    sm->addSelectable(&rollercoaster);
 
 
     wypwindow->getOnSelectSignal()->connect([&](Selectable *s)

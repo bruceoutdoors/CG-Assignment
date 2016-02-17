@@ -13,8 +13,9 @@
 #include <vector>
 #include "Animatable.hpp"
 #include "Drawable.hpp"
+#include "Selectable.hpp"
 
-class Loft : public Drawable{
+class Loft : public Selectable {
 public:
     Loft(const std::vector<vec2> &points, const std::vector<vec3> &path);
     void init();
