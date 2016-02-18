@@ -11,6 +11,7 @@
 #include "utilities/Drawable.hpp"
 #include "utilities/Selectable.hpp"
 #include "utilities/VecMatMath.hpp"
+#include "utilities/Loft.hpp"
 #include <vector>
 class RollerCoaster : public Selectable{
 public:
@@ -19,6 +20,8 @@ public:
     void drawHighlight();
 private:
     std::vector< vec3 > spline;
+    std::vector< vec3 > spline2;
+    Loft* loft;
 };
 
 #endif /* RollerCoaster_hpp */

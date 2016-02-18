@@ -17,14 +17,15 @@ RollerCoaster::RollerCoaster() {
                                  [](float z)->float { return 0; },
                                  [](float x)->float { return x * 5; },
                                  [](float y)->float { return (sin(y/2.0) * 15) + 20; });
+    std::vector<vec2> shape = { {{0,0}}, {{0,10}} };
+    loft = new Loft(shape,spline);
 
 }
 void RollerCoaster::draw() {
 
 
-    std::vector<vec2> shape = { {{0,0}}, {{0,10}} };
 
-    auto loft = new Loft(shape,spline);
+
     loft->draw();
 
 
