@@ -190,34 +190,52 @@ void WypWindow::onMouse(int button, int state, int x, int y)
 {
     y = getHeight() - y;
     switch (button) {
-    case GLUT_RIGHT_BUTTON:
-       if (state == GLUT_DOWN && !setting.mouseRightMode) {
-          setting.mouseX = x;
-          setting.mouseY = y;
-          setting.mouseRightMode = true;
-       }
+        case GLUT_RIGHT_BUTTON:
+           if (state == GLUT_DOWN && !setting.mouseRightMode) {
+              setting.mouseX = x;
+              setting.mouseY = y;
+              setting.mouseRightMode = true;
+           }
 
-       if (state == GLUT_UP && setting.mouseRightMode) {
-          setting.mouseRightMode = false;
-       }
-       break;
-    case GLUT_LEFT_BUTTON:
-       if (state == GLUT_DOWN && !setting.mouseLeftMode) {
-          setting.mouseX = x;
-          setting.mouseY = y;
-          setting.mouseLeftMode = true;
+           if (state == GLUT_UP && setting.mouseRightMode) {
+              setting.mouseRightMode = false;
+           }
+           break;
+        case GLUT_LEFT_BUTTON:
+           if (state == GLUT_DOWN && !setting.mouseLeftMode) {
+              setting.mouseX = x;
+              setting.mouseY = y;
+              setting.mouseLeftMode = true;
 
-          Selectable *s = selMaster->getSelect(x, y);
-          onSelectSignal.broadcast(s);
-       }
+              Selectable *s = selMaster->getSelect(x, y);
+              onSelectSignal.broadcast(s);
+           }
 
-       if (state == GLUT_UP &&  setting.mouseLeftMode) {
-          setting.mouseLeftMode = false;
-       }
-       break;
+           if (state == GLUT_UP &&  setting.mouseLeftMode) {
+              setting.mouseLeftMode = false;
+           }
+           break;
+            
+            
     }
 
     onMouseSignal.broadcast(button, state, x, y);
+}
+
+void WypWindow::onMouseWheel(int button, int dir, int x, int y)
+{
+    if (dir > 0)
+    {
+        std::cout << "WOW IN" << std::endl;
+        // Zoom in
+    }
+    else
+    {
+        std::cout << "WOW OUT" << std::endl;
+        // Zoom out
+    }
+    
+    return;
 }
 
 void WypWindow::welcome()

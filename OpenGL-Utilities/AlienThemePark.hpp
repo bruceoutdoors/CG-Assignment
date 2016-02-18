@@ -40,7 +40,9 @@ private:
     Mesh spaceCruiser;
     Mesh elephant;
     SplineAnimation *sa;
+    SplineAnimation *rollercoaster_animation;
     FloatingAnimation *fa;
     Mesh *activeSelect;
     vector<vec3> spline;
+    vector<vec3> coaster_spline;
 };

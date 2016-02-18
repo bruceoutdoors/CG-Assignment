@@ -16,6 +16,10 @@ FerrisMonster::~FerrisMonster()
 
 void FerrisMonster::draw()
 {
+    
+    applyTransform(
+                   [&]() {
+
     glPushMatrix();
     glTranslatef(3, -2, 1);
     tower.draw();
@@ -52,4 +56,6 @@ void FerrisMonster::draw()
     glPushMatrix();
     moon->draw();
     glPopMatrix();
+                   }
+                   );
 }

@@ -14,15 +14,15 @@
 #include <random>
 RollerCoaster::RollerCoaster() {
     spline = generateSpline(-25, 25, 150,
-                                 [](float z)->float { return sin(z/2.0) * 15; },
-                                 [](float x)->float { return cos(x/2.0) * 15; },
-                                 [](float y)->float { return y; });
+                                 [](float z)->float { return 0; },
+                                 [](float x)->float { return x * 5; },
+                                 [](float y)->float { return (sin(y/2.0) * 15) + 20; });
 
 }
 void RollerCoaster::draw() {
 
 
-    std::vector<vec2> shape = { {{0,0}}, {{2,2}}, {{4,4}} };
+    std::vector<vec2> shape = { {{0,0}}, {{0,10}} };
 
     auto loft = new Loft(shape,spline);
     loft->draw();

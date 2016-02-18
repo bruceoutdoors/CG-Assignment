@@ -14,14 +14,21 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
                             [](float z)->float { return sin(z/2.0) * 15; },
                             [](float x)->float { return cos(x/2.0) * 15; },
                             [](float y)->float { return y + 20; });
+    
+    coaster_spline = generateSpline(-25, 25, 150,
+                            [](float z)->float { return 0; },
+                            [](float x)->float { return x * 5; },
+                            [](float y)->float { return (sin(y/2.0) * 15) + 30; });
 
     sa = new SplineAnimation(&spline, 10);
+    rollercoaster_animation = new SplineAnimation(&coaster_spline, 10);
+    
     fa = new FloatingAnimation(1.2, .6);
 
     spaceship.setFlatColor({{.9, .3, .9}});
     spaceship.disableFlatColor();
     spaceship.setRotateZ(-90);
-    spaceship.addTransformation(sa->getTransformable());
+    spaceship.addTransformation(rollercoaster_animation->getTransformable());
     spaceship.setTexture("data/dark_fighter_6_color.png");
 
     spaceCruiser.setTexture("data/space_cruiser_4_color.png");
@@ -37,9 +44,14 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     elephant.disableFlatColor();
     elephant.setTranslateX(20);
     elephant.setTranslateZ(25);
+    
+//    ferrismonster.addTransformation(rollercoaster_animation->getTransformable());
+//    ferrismonster.setRotateY(90);
+//    ferrismonster.setRotateX(180);
 
-    am.addAnimatable(sa);
+//    am.addAnimatable(sa);
     am.addAnimatable(fa);
+    am.addAnimatable(rollercoaster_animation);
 
     SelectMaster *sm = wypwindow->getSelectMaster();
     sm->addSelectable(&spaceCruiser);

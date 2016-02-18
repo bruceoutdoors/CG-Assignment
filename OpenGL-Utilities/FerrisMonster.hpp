@@ -6,7 +6,7 @@
 #include "CurveTower.hpp"
 #include "utilities/Mesh.hpp"
 
-class FerrisMonster : public Drawable
+class FerrisMonster : public Drawable, public Transformable
 {
 public:
     FerrisMonster();

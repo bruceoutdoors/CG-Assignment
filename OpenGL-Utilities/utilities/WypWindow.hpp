@@ -50,6 +50,7 @@ public:
     void onMotion(int x, int y) override;
     void onMouse(int button, int state, int x, int y) override;
     void onReshape(int width, int height) override;
+    void onMouseWheel(int, int, int, int);
 
     Signal<unsigned char> *getOnKeyboardSignal();
     Signal<int> *getOnSpecialSignal();
