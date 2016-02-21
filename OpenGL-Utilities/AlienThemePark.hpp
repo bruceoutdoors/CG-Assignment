@@ -39,7 +39,7 @@ public:
 private:
     FerrisMonster ferrismonster;
     RollerCoaster rollercoaster;
-    MySpotLights spotlights;
+    MySpotLights *spotlights;
     AnimationMaster am;
     Mesh spaceship;
     Mesh spaceCruiser;
@@ -50,5 +50,6 @@ private:
     Mesh *activeSelect;
     vector<vec3> spline;
     vector<vec3> coaster_spline;
+    bool lighton[7];
     
 };

@@ -10,6 +10,7 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     spaceCruiser("data/space_cruiser_4.obj"),
     elephant("data/elephant-triangulated.obj")
 {
+    setupLights();
     spline = generateSpline(-25, 10, 150,
                             [](float z)->float { return sin(z/2.0) * 15; },
                             [](float x)->float { return cos(x/2.0) * 15; },
@@ -24,6 +25,8 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     rollercoaster_animation = new SplineAnimation(&coaster_spline, 10);
     
     fa = new FloatingAnimation(1.2, .6);
+    
+    spotlights = new MySpotLights();
 
     spaceship.setFlatColor({{.9, .3, .9}});
     spaceship.disableFlatColor();
@@ -52,6 +55,8 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
 //    am.addAnimatable(sa);
     am.addAnimatable(fa);
     am.addAnimatable(rollercoaster_animation);
+    
+    am.addAnimatable(spotlights);
 
     SelectMaster *sm = wypwindow->getSelectMaster();
     sm->addSelectable(&spaceCruiser);
@@ -114,6 +119,8 @@ AlienThemePark::~AlienThemePark()
 
 void AlienThemePark::draw()
 {
+//    GLfloat position[] = {1.0f, 1.0f, 0.0f, 0.0f};
+//    glLightfv(GL_LIGHT0, GL_POSITION, position);
     am.update();
 
     glPushMatrix();
@@ -153,8 +160,8 @@ void AlienThemePark::draw()
     glVertex3f(50, 0, -50);
     glEnd();
     
-    glTranslatef(0,200,0);
-    spotlights.draw();
+    glTranslatef(0,40,0);
+    spotlights->draw();
 }
 
 void AlienThemePark::setupLights() {
@@ -173,13 +180,13 @@ void AlienThemePark::setupLights() {
     // modelview scaling
     glEnable(GL_NORMALIZE);
     
-    spotlights.setupLights();
+    spotlights->setupLights();
 //    myswinglights.setupLights();
     //define the color of light, i.e. LIGHT0
-    GLfloat mycolor[] = { 0.15, 0.15, 0.15};
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, mycolor);
+    //GLfloat mycolor[] = { 0.15, 0.15, 0.15};
+   glLightfv(GL_LIGHT0, GL_DIFFUSE, myblue);
     //enable the light, i.e. LIGHT0
     glEnable(GL_LIGHT0);
-//    for (int i=0; i<6; ++i)
-//        lighton[i] = true;
+    for (int i=0; i<6; ++i)
+        lighton[i] = true;
 }

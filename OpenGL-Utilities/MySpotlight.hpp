@@ -11,7 +11,8 @@
 
 #include <stdio.h>
 #include <GLUT/glut.h>
-class MySpotLights
+#include "utilities/Animatable.hpp"
+class MySpotLights : public Animatable
 {
 public:
     MySpotLights();
@@ -19,7 +20,7 @@ public:
     void setupLights();
     void toggleLight(int lightno);
     void draw();
-    void tickTime(long int elapseTime); //elapsetime in milisec
+    void updateFrame(int elapseTime) override;  //elapsetime in milisec
 private:
     GLUquadricObj *pObj;
     GLfloat rotateangle, rotatespeed;

@@ -11,7 +11,7 @@ public:
     FloatingAnimation(float speed, float strength);
     virtual ~FloatingAnimation();
 
-    void updateFrame(int elapsedTime) override;
+    void updateFrame(int elapsedTime);
 
     Transformable *getTransformable();
 

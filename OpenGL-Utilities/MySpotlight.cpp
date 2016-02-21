@@ -51,8 +51,8 @@ void MySpotLights::setupLights()
     glEnable(GL_LIGHT2);
     glEnable(GL_LIGHT3);
     
-    for (int i=0; i<3; ++i)
-        lighton[i] = true;
+//    for (int i=0; i<3; ++i)
+//        lighton[i] = true;
 }
 void MySpotLights::toggleLight(int lightno) {
     static GLenum tag[] = {GL_LIGHT1, GL_LIGHT2, GL_LIGHT3};
@@ -111,7 +111,7 @@ void MySpotLights::draw()
     if (cullingIsOn==GL_TRUE)
         glEnable(GL_CULL_FACE);
 }
-void MySpotLights::tickTime(long int elapseTime) //elapsetime in milisec
+void MySpotLights::updateFrame(int elapseTime) //elapsetime in milisec
 {
     rotateangle += elapseTime * rotatespeed / 1000.0;
     if (rotateangle>=360)
