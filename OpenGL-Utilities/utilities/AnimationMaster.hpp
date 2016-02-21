@@ -11,6 +11,7 @@ public:
     AnimationMaster(int framePerSec = 60);
     void update();
     void addAnimatable(Animatable *anim);
+    void addAnimatable(Animatable &anim);
     void removeAnimatable(Animatable* anim);
 
 private:

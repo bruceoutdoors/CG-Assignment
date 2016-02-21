@@ -13,6 +13,7 @@
 #include "RollerCoaster.hpp"
 #include "FerrisMonster.hpp"
 #include "MySpotlight.hpp"
+#include "MerryGoRound.hpp"
 
 #include <string>
 #include <vector>
@@ -39,7 +40,9 @@ public:
 private:
     FerrisMonster ferrismonster;
     RollerCoaster rollercoaster;
-    MySpotLights *spotlights;
+    MySpotLights spotlights;
+    MyMerryGoRound merrygoround;
+    
     AnimationMaster am;
     Mesh spaceship;
     Mesh spaceCruiser;

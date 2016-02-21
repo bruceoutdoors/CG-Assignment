@@ -14,7 +14,10 @@ void AnimationMaster::addAnimatable(Animatable* anim)
 {
     anims.push_back(anim);
 }
-
+void AnimationMaster::addAnimatable(Animatable &anim)
+{
+    anims.push_back(&anim);
+}
 void AnimationMaster::removeAnimatable(Animatable* anim)
 {
     auto rf = std::remove_if(anims.begin(), anims.end(),

@@ -25,8 +25,6 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     rollercoaster_animation = new SplineAnimation(&coaster_spline, 10);
     
     fa = new FloatingAnimation(1.2, .6);
-    
-    spotlights = new MySpotLights();
 
     spaceship.setFlatColor({{.9, .3, .9}});
     spaceship.disableFlatColor();
@@ -57,6 +55,7 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     am.addAnimatable(rollercoaster_animation);
     
     am.addAnimatable(spotlights);
+    am.addAnimatable(merrygoround);
 
     SelectMaster *sm = wypwindow->getSelectMaster();
     sm->addSelectable(&spaceCruiser);
@@ -119,9 +118,15 @@ AlienThemePark::~AlienThemePark()
 
 void AlienThemePark::draw()
 {
+
 //    GLfloat position[] = {1.0f, 1.0f, 0.0f, 0.0f};
 //    glLightfv(GL_LIGHT0, GL_POSITION, position);
     am.update();
+    
+    glPushMatrix();
+    glTranslatef(50, 0, 50);
+    merrygoround.draw();
+    glPopMatrix();
 
     glPushMatrix();
 
@@ -161,7 +166,7 @@ void AlienThemePark::draw()
     glEnd();
     
     glTranslatef(0,40,0);
-    spotlights->draw();
+    spotlights.draw();
 }
 
 void AlienThemePark::setupLights() {
@@ -174,13 +179,13 @@ void AlienThemePark::setupLights() {
     // * if disbled,
     //
     //glColor*(...) always in effect if lighting is not enabled
-    glColorMaterial(GL_FRONT, GL_DIFFUSE);
+    //glColorMaterial(GL_FRONT, GL_DIFFUSE);
     glEnable(GL_COLOR_MATERIAL);
     //ensure unit vectors remain unit vectors after
     // modelview scaling
     glEnable(GL_NORMALIZE);
     
-    spotlights->setupLights();
+    spotlights.setupLights();
 //    myswinglights.setupLights();
     //define the color of light, i.e. LIGHT0
     //GLfloat mycolor[] = { 0.15, 0.15, 0.15};
