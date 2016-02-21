@@ -18,6 +18,7 @@
 #include "Person.hpp"
 #include <string>
 #include <vector>
+#include "MySwingLights.hpp"
 
 #ifdef __APPLE__
 #include <GLUT/GLUT.h>
@@ -44,6 +45,8 @@ private:
     MySpotLights spotlights;
     MyMerryGoRound merrygoround;
     MyFerrisWheel ferriswheel;
+    MySwingLights swinglights;
+    
     
     Person person;
     

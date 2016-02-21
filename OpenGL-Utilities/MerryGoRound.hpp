@@ -12,21 +12,25 @@
 #include <GLUT/glut.h>
 #include "utilities/Animatable.hpp"
 #include "MySpotlight.hpp"
+#include "Person.hpp"
+#include <vector>
 class MyMerryGoRound : public Animatable
 {
 public:
     MyMerryGoRound(int rotatespeed = 90);
     ~MyMerryGoRound();
     void draw();
-    void drawSeat(GLfloat angle_to_rotate);
+    void drawSeat(GLfloat angle_to_rotate, int current_index);
     void drawBar();
     void updateFrame(int elapseTime) override;
 private:
     GLUquadricObj *pObj;
+    std::vector<Person*> people;
 //    MySpotLights myspotlights;
     
     int rotatespeed;
     int rotateangle;
+    int total_seats = 10;
 };
 
 #endif /* MerryGoRound_hpp */

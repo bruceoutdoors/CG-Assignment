@@ -7,13 +7,13 @@
 //
 
 #include "Person.hpp"
-Person::Person() {
+Person::Person(float scaleFactor):scaleFactor(scaleFactor) {
     //Setup Quadric Object
     pObj = gluNewQuadric();
     gluQuadricNormals(pObj, GLU_SMOOTH);
-    posx = -5.0f;
+    posx = 0.0f;
     posy = 0.0f;
-    posz = 2.0f;
+    posz = 0.0f;
     roty = 30.0f;
     //initial velocity (in unit per second)
     velx = 40.0f;
@@ -51,14 +51,14 @@ void Person::drawBody() {
     //leg-right
     glPushMatrix();
     glTranslatef(1, 6, 0);
-    glRotatef(45 + walkangle, 0, 0, 0);
+    glRotatef(is_walking ? 45 + walkangle : 0, 0, 0, 0);
     gluCylinder(pObj,1.0f, 1.0f, 6.0f, 5, 5);
     glPopMatrix();
     
     //leg-left
     glPushMatrix();
     glTranslatef(-1, 6, 0);
-    glRotatef(135 - walkangle, 0, 0, 0);
+    glRotatef(is_walking ? 135 - walkangle : 0, 0, 0, 0);
     gluCylinder(pObj,1.0f, 1.0f, 6.0f, 5, 5);
     glPopMatrix();
 }
@@ -66,7 +66,7 @@ void Person::draw()
 {
     glPushMatrix();
     glTranslatef(posx, posy, posz);
-    glScalef(height/30, height/30,height/30);
+    glScalef(scaleFactor, scaleFactor,scaleFactor);
     drawBody();
     glTranslatef(0, 10, 0);
     drawHead();
@@ -114,6 +114,8 @@ void Person::drawHead() {
 }
 
 void Person::updateFrame(int elapseTime) {
-    walkangle = ((int)(walkangle +  (elapseTime * velx / 1000.0)) * 2) % 90;
-    posz += velz * elapseTime / 1000;
+    if(is_walking) {
+        walkangle = ((int)(walkangle +  (elapseTime * velx / 1000.0)) * 2) % 90;
+        posz += velz * elapseTime / 1000;
+    }
 }

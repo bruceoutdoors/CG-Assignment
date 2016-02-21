@@ -51,6 +51,13 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
 //    ferrismonster.setRotateX(180);
 
 //    am.addAnimatable(sa);
+    
+    
+    
+    person.setScale(0.5);
+    person.toggleWalking();
+    
+    
     am.addAnimatable(fa);
     am.addAnimatable(rollercoaster_animation);
     
@@ -58,6 +65,7 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     am.addAnimatable(merrygoround);
     am.addAnimatable(ferriswheel);
     am.addAnimatable(person);
+    am.addAnimatable(swinglights);
 
     SelectMaster *sm = wypwindow->getSelectMaster();
     sm->addSelectable(&spaceCruiser);
@@ -128,8 +136,10 @@ void AlienThemePark::draw()
     person.draw();
     
     glPushMatrix();
-    glTranslatef(50, 0, 50);
+    glTranslatef(0, 0, -30);
     merrygoround.draw();
+    glTranslatef(0,40,0);
+    spotlights.draw();
     glPopMatrix();
     
     glPushMatrix();
@@ -163,7 +173,7 @@ void AlienThemePark::draw()
 
     glPopMatrix();
 
-    //ferrismonster.draw();
+    ferrismonster.draw();
     rollercoaster.draw();
 
     glColor3f(0.5, 0.6, .8);
@@ -175,7 +185,8 @@ void AlienThemePark::draw()
     glEnd();
     
     glTranslatef(0,40,0);
-    spotlights.draw();
+
+    swinglights.draw();
 }
 
 void AlienThemePark::setupLights() {
@@ -195,10 +206,10 @@ void AlienThemePark::setupLights() {
     glEnable(GL_NORMALIZE);
     
     spotlights.setupLights();
-//    myswinglights.setupLights();
+    swinglights.setupLights();
     //define the color of light, i.e. LIGHT0
     //GLfloat mycolor[] = { 0.15, 0.15, 0.15};
-   glLightfv(GL_LIGHT0, GL_DIFFUSE, myblue);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, myblue);
     //enable the light, i.e. LIGHT0
     glEnable(GL_LIGHT0);
     for (int i=0; i<6; ++i)

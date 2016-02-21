@@ -14,6 +14,11 @@ MyFerrisWheel::MyFerrisWheel(int rotatespeed):rotatespeed(rotatespeed) {
     //Setup Quadric Object
     pObj = gluNewQuadric();
     gluQuadricNormals(pObj, GLU_SMOOTH);
+    for(int i = 0 ; i < total_seats; i++ ) {
+        Person* person = new Person();
+        person->setScale(0.4);
+        people.push_back(person);
+    }
 }
 MyFerrisWheel::~MyFerrisWheel() {
     gluDeleteQuadric(pObj);
@@ -30,7 +35,7 @@ void MyFerrisWheel::draw()
     glEnable(GL_CULL_FACE);
     //    myspotlights.setupLights();
 }
-void MyFerrisWheel::drawSeat(GLfloat angle_to_rotate)
+void MyFerrisWheel::drawSeat(GLfloat angle_to_rotate, int current_index)
 {
     //    myspotlights.draw();
     
@@ -56,6 +61,11 @@ void MyFerrisWheel::drawSeat(GLfloat angle_to_rotate)
         {1.0f, 0.0f, 1.0f}};
     gluCylinder(pObj,1.0f, 3.0f, 5.0f, 30, 5);
     
+//    glRotatef(270, 0, 0, 1);
+    glRotatef(270, 0, 1, 0);
+    glTranslatef(3, 0, 0);
+    people[current_index]->draw();
+    
     
     glPopMatrix();
     //color list, you may use a random number to pick the color
@@ -69,9 +79,9 @@ void MyFerrisWheel::drawBar()
     
     glTranslatef(0, 30, 0);
     
-    int total_seats = 10;
+    
     for(int i = 1 ; i < 10 ; i ++) {
-        drawSeat( ( 360 *  i/total_seats) - rotateangle);
+        drawSeat( ( 360 *  i/total_seats) - rotateangle, i);
     }
     
     

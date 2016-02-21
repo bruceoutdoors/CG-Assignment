@@ -14,6 +14,11 @@ MyMerryGoRound::MyMerryGoRound(int rotatespeed):rotatespeed(rotatespeed) {
     //Setup Quadric Object
     pObj = gluNewQuadric();
     gluQuadricNormals(pObj, GLU_SMOOTH);
+    for(int i = 0 ; i < total_seats; i++ ) {
+        Person* person = new Person();
+        person->setScale(0.4);
+        people.push_back(person);
+    }
 }
 MyMerryGoRound::~MyMerryGoRound() {
     gluDeleteQuadric(pObj);
@@ -30,7 +35,7 @@ void MyMerryGoRound::draw()
     glEnable(GL_CULL_FACE);
 //    myspotlights.setupLights();
 }
-void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate)
+void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate, int current_index)
 {
 //    myspotlights.draw();
     
@@ -52,8 +57,13 @@ void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate)
         {1.0f, 1.0f, 0.0f},
         {0.0f, 1.0f, 1.0f},
         {1.0f, 0.0f, 1.0f}};
+
     gluCylinder(pObj,1.0f, 3.0f, 5.0f, 30, 5);
-    
+
+    glRotatef(270, 0, 0, 1);
+    glRotatef(180, 0, 1, 0);
+    glTranslatef(0, 0, -4);
+    people[current_index]->draw();
     
     glPopMatrix();
     //color list, you may use a random number to pick the color
@@ -67,9 +77,9 @@ void MyMerryGoRound::drawBar()
     
     glTranslatef(0, 30, 0);
     
-    int total_seats = 10;
+
     for(int i = 1 ; i < 10 ; i ++) {
-        drawSeat( ( 360 *  i/total_seats) - rotateangle);
+        drawSeat( ( 360 *  i/total_seats) - rotateangle, i);
     }
 
     
