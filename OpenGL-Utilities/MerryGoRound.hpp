@@ -14,6 +14,7 @@
 #include "MySpotlight.hpp"
 #include "Person.hpp"
 #include <vector>
+#include "utilities/VecMatMath.hpp"
 class MyMerryGoRound : public Animatable
 {
 public:
@@ -31,6 +32,15 @@ private:
     int rotatespeed;
     int rotateangle;
     int total_seats = 10;
+    std::vector<vec3> colors= {
+        {1.0f, 1.0f, 0.0f},
+        {0.0f, 1.0f, 0.0f},
+        {0.0f, 0.0f, 1.0f},
+        {1.0f, 1.0f, 0.0f},
+        {0.0f, 1.0f, 1.0f},
+        {1.0f, 0.0f, 1.0f}
+    };
+
 };
 
 #endif /* MerryGoRound_hpp */

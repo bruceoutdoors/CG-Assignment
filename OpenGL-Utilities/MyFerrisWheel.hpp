@@ -14,6 +14,7 @@
 #include "MySpotlight.hpp"
 #include "Person.hpp"
 #include <vector>
+#include "utilities/VecMatMath.hpp"
 class MyFerrisWheel : public Animatable
 {
 public:
@@ -28,6 +29,15 @@ private:
     
     std::vector<Person*> people;
     //    MySpotLights myspotlights;
+    
+    std::vector<vec3> colors= {
+        {1.0f, 1.0f, 0.0f},
+        {0.0f, 1.0f, 0.0f},
+        {0.0f, 0.0f, 1.0f},
+        {1.0f, 1.0f, 0.0f},
+        {0.0f, 1.0f, 1.0f},
+        {1.0f, 0.0f, 1.0f}
+    };
     
     int rotatespeed;
     int rotateangle;

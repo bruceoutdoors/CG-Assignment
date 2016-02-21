@@ -10,6 +10,7 @@
 #include <random>
 
 
+
 MyMerryGoRound::MyMerryGoRound(int rotatespeed):rotatespeed(rotatespeed) {
     //Setup Quadric Object
     pObj = gluNewQuadric();
@@ -48,15 +49,11 @@ void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate, int current_index)
     gluCylinder(pObj,0.5f, 0.5f, 20.0f, 30, 5);
     glTranslatef(0, 0, 20);
     glRotatef(90, 0, 1, 0);
+    glColor3f(colors[current_index % colors.size()][0] ,
+               colors[current_index % colors.size()][1],
+               colors[current_index% colors.size()][2] );
     
     
-    GLfloat color[][3] = {
-        {1.0f, 1.0f, 0.0f},
-        {0.0f, 1.0f, 0.0f},
-        {0.0f, 0.0f, 1.0f},
-        {1.0f, 1.0f, 0.0f},
-        {0.0f, 1.0f, 1.0f},
-        {1.0f, 0.0f, 1.0f}};
 
     gluCylinder(pObj,1.0f, 3.0f, 5.0f, 30, 5);
 

@@ -51,14 +51,9 @@ void MyFerrisWheel::drawSeat(GLfloat angle_to_rotate, int current_index)
     glTranslatef(0, 0, 5);
     glRotatef(90, 0, 1, 0);
     
-    
-    GLfloat color[][3] = {
-        {1.0f, 1.0f, 0.0f},
-        {0.0f, 1.0f, 0.0f},
-        {0.0f, 0.0f, 1.0f},
-        {1.0f, 1.0f, 0.0f},
-        {0.0f, 1.0f, 1.0f},
-        {1.0f, 0.0f, 1.0f}};
+    glColor3f(colors[current_index % colors.size()][0] ,
+              colors[current_index % colors.size()][1],
+              colors[current_index% colors.size()][2] );
     gluCylinder(pObj,1.0f, 3.0f, 5.0f, 30, 5);
     
 //    glRotatef(270, 0, 0, 1);
