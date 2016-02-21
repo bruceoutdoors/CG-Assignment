@@ -15,7 +15,7 @@
 #include "MySpotlight.hpp"
 #include "MerryGoRound.hpp"
 #include "MyFerrisWheel.hpp"
-
+#include "Person.hpp"
 #include <string>
 #include <vector>
 
@@ -44,6 +44,8 @@ private:
     MySpotLights spotlights;
     MyMerryGoRound merrygoround;
     MyFerrisWheel ferriswheel;
+    
+    Person person;
     
     AnimationMaster am;
     Mesh spaceship;

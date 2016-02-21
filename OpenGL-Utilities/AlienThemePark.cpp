@@ -57,6 +57,7 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     am.addAnimatable(spotlights);
     am.addAnimatable(merrygoround);
     am.addAnimatable(ferriswheel);
+    am.addAnimatable(person);
 
     SelectMaster *sm = wypwindow->getSelectMaster();
     sm->addSelectable(&spaceCruiser);
@@ -124,6 +125,8 @@ void AlienThemePark::draw()
 //    glLightfv(GL_LIGHT0, GL_POSITION, position);
     am.update();
     
+    person.draw();
+    
     glPushMatrix();
     glTranslatef(50, 0, 50);
     merrygoround.draw();
@@ -160,7 +163,7 @@ void AlienThemePark::draw()
 
     glPopMatrix();
 
-    ferrismonster.draw();
+    //ferrismonster.draw();
     rollercoaster.draw();
 
     glColor3f(0.5, 0.6, .8);
