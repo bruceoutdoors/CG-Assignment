@@ -9,8 +9,12 @@
 #ifndef MySwingLights_hpp
 #define MySwingLights_hpp
 
-#include <GLUT/glut.h>
-#include "Animatable.hpp"
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/glut.h>
+#endif
+#include "utilities/Animatable.hpp"
 class MySwingLights : public Animatable
 {
 public:
@@ -25,7 +29,7 @@ private:
     GLfloat length; //length of the pendulum
     GLfloat horizDisp1, horizDisp2; //horizontal displacement
     long int timestart;
-    
+
     bool lighton[2]; //keep track if lights are on or off
 };
 #endif /* MySwingLights_hpp */

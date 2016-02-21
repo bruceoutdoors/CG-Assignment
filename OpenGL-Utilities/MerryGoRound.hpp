@@ -9,7 +9,11 @@
 #ifndef MerryGoRound_hpp
 #define MerryGoRound_hpp
 
-#include <GLUT/glut.h>
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/glut.h>
+#endif
 #include "utilities/Animatable.hpp"
 #include "MySpotlight.hpp"
 #include "Person.hpp"
@@ -28,17 +32,17 @@ private:
     GLUquadricObj *pObj;
     std::vector<Person*> people;
 //    MySpotLights myspotlights;
-    
+
     int rotatespeed;
     int rotateangle;
     int total_seats = 10;
     std::vector<vec3> colors= {
-        {1.0f, 1.0f, 0.0f},
-        {0.0f, 1.0f, 0.0f},
-        {0.0f, 0.0f, 1.0f},
-        {1.0f, 1.0f, 0.0f},
-        {0.0f, 1.0f, 1.0f},
-        {1.0f, 0.0f, 1.0f}
+        {{1.0f, 1.0f, 0.0f}},
+        {{0.0f, 1.0f, 0.0f}},
+        {{0.0f, 0.0f, 1.0f}},
+        {{1.0f, 1.0f, 0.0f}},
+        {{0.0f, 1.0f, 1.0f}},
+        {{1.0f, 0.0f, 1.0f}}
     };
 
 };

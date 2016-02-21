@@ -8,6 +8,11 @@
 
 #include "MySwingLights.hpp"
 #include "CGLabMain.hpp"
+
+#ifndef M_PI
+    #define M_PI 3.14159265358979323846
+#endif
+
 MySwingLights::MySwingLights()
 {
     pObj = gluNewQuadric();
@@ -21,7 +26,7 @@ void MySwingLights::setupLights() {
     glLightfv(GL_LIGHT4, GL_DIFFUSE, mywhite);
     glLightfv(GL_LIGHT4, GL_SPECULAR, mywhite);
     glLightf (GL_LIGHT4, GL_CONSTANT_ATTENUATION, 1.0);
-    
+
     glLightf (GL_LIGHT4,
               GL_LINEAR_ATTENUATION, 0.2);
     glLightfv(GL_LIGHT5, GL_AMBIENT, mywhite);
@@ -41,7 +46,7 @@ void MySwingLights::toggleLight(int lightno) {
         glEnable( tag[lightno] );
     else
         glDisable( tag[lightno] );
-    
+
 }
 void MySwingLights::draw()
 {

@@ -42,6 +42,15 @@
 		<Unit filename="CurveTower.hpp" />
 		<Unit filename="FerrisMonster.cpp" />
 		<Unit filename="FerrisMonster.hpp" />
+		<Unit filename="MerryGoRound.cpp" />
+		<Unit filename="MerryGoRound.hpp" />
+		<Unit filename="MyFerrisWheel.cpp" />
+		<Unit filename="MyFerrisWheel.hpp" />
+		<Unit filename="MySpotlight.cpp" />
+		<Unit filename="MySpotlight.hpp" />
+		<Unit filename="MySwingLights.cpp" />
+		<Unit filename="Person.cpp" />
+		<Unit filename="Person.hpp" />
 		<Unit filename="RollerCoaster.cpp" />
 		<Unit filename="RollerCoaster.hpp" />
 		<Unit filename="Tower.cpp" />

@@ -8,7 +8,12 @@
 
 #ifndef Person_hpp
 #define Person_hpp
-#include <GLUT/glut.h>
+
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/glut.h>
+#endif
 #include "utilities/Animatable.hpp"
 class Person : public Animatable
 {

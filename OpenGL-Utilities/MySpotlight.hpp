@@ -10,7 +10,11 @@
 #define MySpotlight_hpp
 
 #include <stdio.h>
-#include <GLUT/glut.h>
+#ifdef __APPLE__
+#include <GLUT/GLUT.h>
+#else
+#include <GL/glut.h>
+#endif
 #include "utilities/Animatable.hpp"
 class MySpotLights : public Animatable
 {
