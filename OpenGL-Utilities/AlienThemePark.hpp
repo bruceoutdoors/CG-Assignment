@@ -12,6 +12,7 @@
 
 #include "RollerCoaster.hpp"
 #include "FerrisMonster.hpp"
+#include "MySpotlight.hpp"
 
 #include <string>
 #include <vector>
@@ -25,16 +26,20 @@
 
 using namespace std;
 
+
 class AlienThemePark : public MyVirtualWorld
 {
 public:
     AlienThemePark(WypWindow *wypwindow);
+    void setupLights();
+    void toggleLight(int lightno);
     virtual ~AlienThemePark();
     void draw() override;
 
 private:
     FerrisMonster ferrismonster;
     RollerCoaster rollercoaster;
+    MySpotLights spotlights;
     AnimationMaster am;
     Mesh spaceship;
     Mesh spaceCruiser;
@@ -45,4 +50,5 @@ private:
     Mesh *activeSelect;
     vector<vec3> spline;
     vector<vec3> coaster_spline;
+    
 };

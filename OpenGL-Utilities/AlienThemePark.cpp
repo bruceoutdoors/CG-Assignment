@@ -152,4 +152,34 @@ void AlienThemePark::draw()
     glVertex3f(50, 0, 50);
     glVertex3f(50, 0, -50);
     glEnd();
+    
+    glTranslatef(0,200,0);
+    spotlights.draw();
+}
+
+void AlienThemePark::setupLights() {
+    glEnable(GL_LIGHTING);
+    //GL_COLOR_MATERIAL
+    //  * relevant only if lighting is enabled
+    //  * disabled by default
+    //  * if enabled,glColor*(...) is in effect to change the color tracked by glColorMaterial
+    //  (meaning that in our case here, glColor*(...) affect the diffuse color of the frant face) glMaterial*(...) is in effect to change the color glColor*(...) will not work!
+    // * if disbled,
+    //
+    //glColor*(...) always in effect if lighting is not enabled
+    glColorMaterial(GL_FRONT, GL_DIFFUSE);
+    glEnable(GL_COLOR_MATERIAL);
+    //ensure unit vectors remain unit vectors after
+    // modelview scaling
+    glEnable(GL_NORMALIZE);
+    
+    spotlights.setupLights();
+//    myswinglights.setupLights();
+    //define the color of light, i.e. LIGHT0
+    GLfloat mycolor[] = { 0.15, 0.15, 0.15};
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, mycolor);
+    //enable the light, i.e. LIGHT0
+    glEnable(GL_LIGHT0);
+//    for (int i=0; i<6; ++i)
+//        lighton[i] = true;
 }

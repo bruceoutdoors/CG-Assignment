@@ -1,0 +1,29 @@
+//
+//  MySpotlight.hpp
+//  OpenGL-Utilities
+//
+//  Created by Yong Lian Hii on 21/02/2016.
+//  Copyright © 2016 Yong Lian Hii. All rights reserved.
+//
+
+#ifndef MySpotlight_hpp
+#define MySpotlight_hpp
+
+#include <stdio.h>
+#include <GLUT/glut.h>
+class MySpotLights
+{
+public:
+    MySpotLights();
+    ~MySpotLights();
+    void setupLights();
+    void toggleLight(int lightno);
+    void draw();
+    void tickTime(long int elapseTime); //elapsetime in milisec
+private:
+    GLUquadricObj *pObj;
+    GLfloat rotateangle, rotatespeed;
+    bool lighton[3]; //keep track if lights are on or off
+};
+
+#endif /* MySpotlight_hpp */
