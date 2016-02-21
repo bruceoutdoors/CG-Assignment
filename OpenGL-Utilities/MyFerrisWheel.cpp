@@ -1,47 +1,49 @@
 //
-//  MerryGoRound.cpp
+//  MyFerrisWheel.cpp
 //  OpenGL-Utilities
 //
 //  Created by Yong Lian Hii on 21/02/2016.
 //  Copyright © 2016 Yong Lian Hii. All rights reserved.
 //
 
-#include "MerryGoRound.hpp"
+#include "MyFerrisWheel.hpp"
 #include <random>
 
 
-MyMerryGoRound::MyMerryGoRound(int rotatespeed):rotatespeed(rotatespeed) {
+MyFerrisWheel::MyFerrisWheel(int rotatespeed):rotatespeed(rotatespeed) {
     //Setup Quadric Object
     pObj = gluNewQuadric();
     gluQuadricNormals(pObj, GLU_SMOOTH);
 }
-MyMerryGoRound::~MyMerryGoRound() {
+MyFerrisWheel::~MyFerrisWheel() {
     gluDeleteQuadric(pObj);
 }
-void MyMerryGoRound::draw()
+void MyFerrisWheel::draw()
 {
     glDisable(GL_CULL_FACE);
     glPushMatrix();
     
     drawBar();
     glPopMatrix();
-//    srand(1); //initialize the random number generator
-//    // fill up later
+    //    srand(1); //initialize the random number generator
+    //    // fill up later
     glEnable(GL_CULL_FACE);
-//    myspotlights.setupLights();
+    //    myspotlights.setupLights();
 }
-void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate)
+void MyFerrisWheel::drawSeat(GLfloat angle_to_rotate)
 {
-//    myspotlights.draw();
+    //    myspotlights.draw();
     
     glPushMatrix();
-
-    glRotatef(angle_to_rotate, 0, 1, 0);
+    
+    glTranslatef(5, 0, 0);
+    
+    glRotatef(angle_to_rotate, 1, 0, 0);
     gluCylinder(pObj,0.5f, 0.5f, 20.0f, 30, 5);
     glTranslatef(0, 0, 20);
-    glRotatef(90, 1, 0, 0);
-    gluCylinder(pObj,0.5f, 0.5f, 20.0f, 30, 5);
-    glTranslatef(0, 0, 20);
+    glRotatef(90, 0, 1, 0);
+    gluCylinder(pObj,0.5f, 0.5f, 5.0f, 30, 5);
+    glTranslatef(0, 0, 5);
     glRotatef(90, 0, 1, 0);
     
     
@@ -58,7 +60,7 @@ void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate)
     glPopMatrix();
     //color list, you may use a random number to pick the color
 };
-void MyMerryGoRound::drawBar()
+void MyFerrisWheel::drawBar()
 {
     glPushMatrix();
     glRotatef(-90, 1, 0, 0);
@@ -71,13 +73,13 @@ void MyMerryGoRound::drawBar()
     for(int i = 1 ; i < 10 ; i ++) {
         drawSeat( ( 360 *  i/total_seats) - rotateangle);
     }
-
+    
     
     
     // fill up later
 }
 
-void MyMerryGoRound::updateFrame(int elapseTime) {
+void MyFerrisWheel::updateFrame(int elapseTime) {
     rotateangle += elapseTime * rotatespeed / 1000.0;
     if (rotateangle>=360)
     {
