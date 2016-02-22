@@ -1,3 +1,13 @@
+/********************************************
+Course : TGD2151 Computer Graphics Fundamentals /
+         TCS2111 Computer Graphics
+Session: Trimester 2, 2015/16
+ID and Name #1 : 1141125087 Hii Yong Lian
+Contacts    #1 : 016-4111005 yonglian146@gmail.com
+ID and Name #2 : 112272848 Lee Zhen Yong
+Contacts    #2 : 016-3188854 bruceoutdoors@gmail.com
+********************************************/
+
 //
 //  Person.cpp
 //  OpenGL-Utilities
@@ -24,7 +34,7 @@ Person::~Person() {
     gluDeleteQuadric(pObj);
 }
 void Person::drawBody() {
-    
+
     //body
     glPushMatrix();
     glTranslatef(0, 4, 0);
@@ -33,28 +43,28 @@ void Person::drawBody() {
     glRotatef(-90, 1, 0, 0);
     gluCylinder(pObj,3.0f, 3.0f, 6.0f, 5, 5);
     glPopMatrix();
-    
+
     //hand-right
     glPushMatrix();
     glTranslatef(0, 10, 0);
     glRotatef(90, 0, 1, -0.5);
     gluCylinder(pObj,1.0f, 1.0f, 6.0f, 5, 5);
     glPopMatrix();
-    
+
     //hand-left
     glPushMatrix();
     glTranslatef(0, 10, 0);
     glRotatef(90, 0, -1, 0.5);
     gluCylinder(pObj,1.0f, 1.0f, 6.0f, 5, 5);
     glPopMatrix();
-    
+
     //leg-right
     glPushMatrix();
     glTranslatef(1, 6, 0);
     glRotatef(is_walking ? 45 + walkangle : 0, 0, 0, 0);
     gluCylinder(pObj,1.0f, 1.0f, 6.0f, 5, 5);
     glPopMatrix();
-    
+
     //leg-left
     glPushMatrix();
     glTranslatef(-1, 6, 0);
@@ -70,7 +80,7 @@ void Person::draw()
     drawBody();
     glTranslatef(0, 10, 0);
     drawHead();
-    
+
     glPopMatrix();
 
 }

@@ -1,3 +1,13 @@
+/********************************************
+Course : TGD2151 Computer Graphics Fundamentals /
+         TCS2111 Computer Graphics
+Session: Trimester 2, 2015/16
+ID and Name #1 : 1141125087 Hii Yong Lian
+Contacts    #1 : 016-4111005 yonglian146@gmail.com
+ID and Name #2 : 112272848 Lee Zhen Yong
+Contacts    #2 : 016-3188854 bruceoutdoors@gmail.com
+********************************************/
+
 #include "AlienThemePark.hpp"
 #include <iostream>
 
@@ -15,7 +25,7 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
                             [](float z)->float { return sin(z/2.0) * 15; },
                             [](float x)->float { return cos(x/2.0) * 15; },
                             [](float y)->float { return y + 20; });
-    
+
     coaster_spline = generateSpline(-25, 25, 150,
                             [](float z)->float { return 0; },
                             [](float x)->float { return x * 5; },
@@ -23,7 +33,7 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
 
     sa = new SplineAnimation(&spline, 10);
     rollercoaster_animation = new SplineAnimation(&coaster_spline, 10);
-    
+
     fa = new FloatingAnimation(1.2, .6);
 
     spaceship.setFlatColor({{.9, .3, .9}});
@@ -45,22 +55,22 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
     elephant.disableFlatColor();
     elephant.setTranslateX(20);
     elephant.setTranslateZ(25);
-    
+
 //    ferrismonster.addTransformation(rollercoaster_animation->getTransformable());
 //    ferrismonster.setRotateY(90);
 //    ferrismonster.setRotateX(180);
 
 //    am.addAnimatable(sa);
-    
-    
-    
+
+
+
     person.setScale(0.5);
     person.toggleWalking();
-    
-    
+
+
     am.addAnimatable(fa);
     am.addAnimatable(rollercoaster_animation);
-    
+
     am.addAnimatable(spotlights);
     am.addAnimatable(merrygoround);
     am.addAnimatable(ferriswheel);
@@ -108,15 +118,15 @@ AlienThemePark::AlienThemePark(WypWindow *wypwindow) :
 
     wypwindow->getOnKeyboardSignal()->connect([&](unsigned char c)
     {
-        cout << c;
+//        cout << c;
     });
 
     wypwindow->getOnMouseSignal()->connect(
         [&](int button, int state, int x, int y)
     {
-        if (state == GLUT_UP) {
-            cout << "click: " << x << " " << y << endl;
-        }
+//        if (state == GLUT_UP) {
+//            cout << "click: " << x << " " << y << endl;
+//        }
     });
 }
 
@@ -132,16 +142,16 @@ void AlienThemePark::draw()
 //    GLfloat position[] = {1.0f, 1.0f, 0.0f, 0.0f};
 //    glLightfv(GL_LIGHT0, GL_POSITION, position);
     am.update();
-    
+
     person.draw();
-    
+
     glPushMatrix();
     glTranslatef(0, 0, -30);
     merrygoround.draw();
     glTranslatef(0,40,0);
     spotlights.draw();
     glPopMatrix();
-    
+
     glPushMatrix();
     glTranslatef(-50, 0, 50);
     ferriswheel.draw();
@@ -183,7 +193,7 @@ void AlienThemePark::draw()
     glVertex3f(50, 0, 50);
     glVertex3f(50, 0, -50);
     glEnd();
-    
+
     glTranslatef(0,40,0);
 
     swinglights.draw();
@@ -204,7 +214,7 @@ void AlienThemePark::setupLights() {
     //ensure unit vectors remain unit vectors after
     // modelview scaling
     glEnable(GL_NORMALIZE);
-    
+
     spotlights.setupLights();
     swinglights.setupLights();
     //define the color of light, i.e. LIGHT0

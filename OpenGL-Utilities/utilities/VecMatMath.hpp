@@ -1,3 +1,13 @@
+/********************************************
+Course : TGD2151 Computer Graphics Fundamentals /
+         TCS2111 Computer Graphics
+Session: Trimester 2, 2015/16
+ID and Name #1 : 1141125087 Hii Yong Lian
+Contacts    #1 : 016-4111005 yonglian146@gmail.com
+ID and Name #2 : 112272848 Lee Zhen Yong
+Contacts    #2 : 016-3188854 bruceoutdoors@gmail.com
+********************************************/
+
 #pragma once
 
 #include <math.h>
@@ -149,7 +159,7 @@ long long getDistance(std::vector<T> points) {
 template<typename T>
 std::vector<vec3> bezierFunction( vec3 point0,vec3 point1,vec3 point2,vec3 point3) {
     std::vector<vec3> points;
-    
+
     if (getDistance(std::vector<vec3>{point0,point1,point2,point3})) {
         points = {point0,point1,point2,point3};
         return points;
@@ -162,11 +172,11 @@ std::vector<vec3> bezierFunction( vec3 point0,vec3 point1,vec3 point2,vec3 point
     vec3 pointAB =scalaMult(add(pointA, pointB), 0.5);
     std::vector<vec3> tempvec = bezierFunction<vec3>(point0,point01, pointA, pointAB);
     std::vector<vec3> tempvec2 = bezierFunction<vec3>(pointAB, pointB, point23, point3);
-    
+
     points.reserve( tempvec.size() + tempvec2.size() ); // preallocate memory
     points.insert( points.end(), tempvec.begin(), tempvec.end() ); // combine points and tempvec
     points.insert( points.end(), tempvec2.begin(), tempvec2.end() ); //ditto
-    
+
     return points;
-    
+
 }

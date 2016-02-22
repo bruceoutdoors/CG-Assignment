@@ -1,3 +1,13 @@
+/********************************************
+Course : TGD2151 Computer Graphics Fundamentals /
+         TCS2111 Computer Graphics
+Session: Trimester 2, 2015/16
+ID and Name #1 : 1141125087 Hii Yong Lian
+Contacts    #1 : 016-4111005 yonglian146@gmail.com
+ID and Name #2 : 112272848 Lee Zhen Yong
+Contacts    #2 : 016-3188854 bruceoutdoors@gmail.com
+********************************************/
+
 //
 //  Loft.cpp
 //  OpenGL-Utilities-XCODE
@@ -35,10 +45,10 @@ void Loft::init() {
         }
     }
 
-    
+
 }
 void Loft::draw() {
-    
+
     //Guideline for Loft
     glBegin(GL_LINES);
     glColor3f(1.0, 1.0, 0.0);
@@ -58,22 +68,22 @@ void Loft::draw() {
             glVertex3f((*jt)[0], (*jt)[1], (*jt)[2]);
         }
         glEnd();
-        
+
         if( ( it + 1) != points3d.end()) {
             for(auto jt = (*it).begin(); jt != (*it).end(); jt++) {
                 long j = std::distance( (*it).begin(), jt );
-                
+
                 glBegin(GL_QUADS);
                 glColor3f(1.0, 0.0, 0.0);
                 glVertex3f((*jt)[0], (*jt)[1], (*jt)[2]);
-                
+
                 if ( (jt+1) != (*it).end() ) {
                     glVertex3f((*(jt+1))[0], (*(jt+1))[1], (*(jt+1))[2]);
                 }else {
                     auto temp_it = (*it).begin();
                     glVertex3f ((*temp_it)[0], ((*temp_it)[1]), ((*temp_it)[2]));
                 }
-                
+
                 auto next_point_it = (*(it + 1)).begin() + j;
                 if ( (next_point_it+1) != (*(it + 1)).end() ) {
                     glVertex3f((*(next_point_it+1))[0], (*(next_point_it+1))[1], (*(next_point_it+1))[2]);
@@ -83,10 +93,10 @@ void Loft::draw() {
                 }
                 glVertex3f((*next_point_it)[0], (*next_point_it)[1], (*next_point_it)[2]);
                 glEnd();
-                
+
             }
         }
     }
     glPopMatrix();
-    
+
 }

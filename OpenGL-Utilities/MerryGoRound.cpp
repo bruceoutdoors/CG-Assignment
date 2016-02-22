@@ -1,10 +1,12 @@
-//
-//  MerryGoRound.cpp
-//  OpenGL-Utilities
-//
-//  Created by Yong Lian Hii on 21/02/2016.
-//  Copyright © 2016 Yong Lian Hii. All rights reserved.
-//
+/********************************************
+Course : TGD2151 Computer Graphics Fundamentals /
+         TCS2111 Computer Graphics
+Session: Trimester 2, 2015/16
+ID and Name #1 : 1141125087 Hii Yong Lian
+Contacts    #1 : 016-4111005 yonglian146@gmail.com
+ID and Name #2 : 112272848 Lee Zhen Yong
+Contacts    #2 : 016-3188854 bruceoutdoors@gmail.com
+********************************************/
 
 #include "MerryGoRound.hpp"
 #include <random>
@@ -28,7 +30,7 @@ void MyMerryGoRound::draw()
 {
     glDisable(GL_CULL_FACE);
     glPushMatrix();
-    
+
     drawBar();
     glPopMatrix();
 //    srand(1); //initialize the random number generator
@@ -39,7 +41,7 @@ void MyMerryGoRound::draw()
 void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate, int current_index)
 {
 //    myspotlights.draw();
-    
+
     glPushMatrix();
 
     glRotatef(angle_to_rotate, 0, 1, 0);
@@ -52,8 +54,8 @@ void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate, int current_index)
     glColor3f(colors[current_index % colors.size()][0] ,
                colors[current_index % colors.size()][1],
                colors[current_index% colors.size()][2] );
-    
-    
+
+
 
     gluCylinder(pObj,1.0f, 3.0f, 5.0f, 30, 5);
 
@@ -61,7 +63,7 @@ void MyMerryGoRound::drawSeat(GLfloat angle_to_rotate, int current_index)
     glRotatef(180, 0, 1, 0);
     glTranslatef(0, 0, -4);
     people[current_index]->draw();
-    
+
     glPopMatrix();
     //color list, you may use a random number to pick the color
 };
@@ -71,16 +73,16 @@ void MyMerryGoRound::drawBar()
     glRotatef(-90, 1, 0, 0);
     gluCylinder(pObj,3.0f, 3.0f, 30.0f, 30, 5);
     glPopMatrix();
-    
+
     glTranslatef(0, 30, 0);
-    
+
 
     for(int i = 1 ; i < 10 ; i ++) {
         drawSeat( ( 360 *  i/total_seats) - rotateangle, i);
     }
 
-    
-    
+
+
     // fill up later
 }
 
@@ -90,5 +92,5 @@ void MyMerryGoRound::updateFrame(int elapseTime) {
     {
         rotateangle = 360 - rotateangle;
     }
-    
+
 }

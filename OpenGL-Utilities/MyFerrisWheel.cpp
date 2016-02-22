@@ -1,3 +1,13 @@
+/********************************************
+Course : TGD2151 Computer Graphics Fundamentals /
+         TCS2111 Computer Graphics
+Session: Trimester 2, 2015/16
+ID and Name #1 : 1141125087 Hii Yong Lian
+Contacts    #1 : 016-4111005 yonglian146@gmail.com
+ID and Name #2 : 112272848 Lee Zhen Yong
+Contacts    #2 : 016-3188854 bruceoutdoors@gmail.com
+********************************************/
+
 //
 //  MyFerrisWheel.cpp
 //  OpenGL-Utilities
@@ -27,7 +37,7 @@ void MyFerrisWheel::draw()
 {
     glDisable(GL_CULL_FACE);
     glPushMatrix();
-    
+
     drawBar();
     glPopMatrix();
     //    srand(1); //initialize the random number generator
@@ -38,11 +48,11 @@ void MyFerrisWheel::draw()
 void MyFerrisWheel::drawSeat(GLfloat angle_to_rotate, int current_index)
 {
     //    myspotlights.draw();
-    
+
     glPushMatrix();
-    
+
     glTranslatef(5, 0, 0);
-    
+
     glRotatef(angle_to_rotate, 1, 0, 0);
     gluCylinder(pObj,0.5f, 0.5f, 20.0f, 30, 5);
     glTranslatef(0, 0, 20);
@@ -50,18 +60,18 @@ void MyFerrisWheel::drawSeat(GLfloat angle_to_rotate, int current_index)
     gluCylinder(pObj,0.5f, 0.5f, 5.0f, 30, 5);
     glTranslatef(0, 0, 5);
     glRotatef(90, 0, 1, 0);
-    
+
     glColor3f(colors[current_index % colors.size()][0] ,
               colors[current_index % colors.size()][1],
               colors[current_index% colors.size()][2] );
     gluCylinder(pObj,1.0f, 3.0f, 5.0f, 30, 5);
-    
+
 //    glRotatef(270, 0, 0, 1);
     glRotatef(270, 0, 1, 0);
     glTranslatef(3, 0, 0);
     people[current_index]->draw();
-    
-    
+
+
     glPopMatrix();
     //color list, you may use a random number to pick the color
 };
@@ -71,16 +81,16 @@ void MyFerrisWheel::drawBar()
     glRotatef(-90, 1, 0, 0);
     gluCylinder(pObj,3.0f, 3.0f, 30.0f, 30, 5);
     glPopMatrix();
-    
+
     glTranslatef(0, 30, 0);
-    
-    
+
+
     for(int i = 1 ; i < 10 ; i ++) {
         drawSeat( ( 360 *  i/total_seats) - rotateangle, i);
     }
-    
-    
-    
+
+
+
     // fill up later
 }
 
@@ -90,5 +100,5 @@ void MyFerrisWheel::updateFrame(int elapseTime) {
     {
         rotateangle = 360 - rotateangle;
     }
-    
+
 }
